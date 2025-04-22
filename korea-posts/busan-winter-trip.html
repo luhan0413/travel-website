@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>釜山冬季之旅 - Tcarval</title>
+    <meta name="description" content="探索韓國釜山的冬季魅力，從海雲台溫泉到甘川文化村，體驗這座海濱城市的浪漫與美食。">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        .text-rose {
+            color: #e91e63;
+        }
+        .bg-rose {
+            background-color: #e91e63;
+        }
+        .btn-rose {
+            background-color: #e91e63;
+            color: white;
+        }
+        .btn-rose:hover {
+            background-color: #c2185b;
+            color: white;
+        }
+        .border-rose {
+            border-color: #e91e63 !important;
+        }
+        .hover-shadow {
+            transition: all 0.3s ease;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .sidebar a.active {
+            background-color: rgba(233, 30, 99, 0.1);
+            color: #e91e63;
+            font-weight: 600;
+        }
+        .nav-tabs .nav-link.active {
+            color: #e91e63;
+            border-bottom: 2px solid #e91e63;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .nav-tabs .nav-link {
+            border: none;
+        }
+        .section-title {
+            border-left: 4px solid #e91e63;
+            padding-left: 15px;
+        }
+        .attraction-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .attraction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .attraction-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .table-of-contents {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .table-of-contents a {
+            color: #495057;
+            text-decoration: none;
+        }
+        .table-of-contents a:hover {
+            color: #e91e63;
+        }
+        .itinerary-day {
+            position: relative;
+            padding-left: 30px;
+        }
+        .itinerary-day::before {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e91e63;
+        }
+        .itinerary-day::after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e91e63;
+        }
+        .weather-card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .temp-range {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .temp-icon {
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="border-bottom sticky-top bg-white">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="../index.html" class="text-decoration-none">
+                    <h1 class="fs-4 fw-bold text-rose m-0">Tcarval</h1>
+                </a>
+                <div class="d-none d-md-flex gap-4">
+                    <a href="../japan.html" class="text-decoration-none text-dark">日本</a>
+                    <a href="../korea.html" class="text-decoration-none text-rose fw-semibold">韓國</a>
+                    <a href="../thailand.html" class="text-decoration-none text-dark">泰國</a>
+                    <a href="../eastern-europe.html" class="text-decoration-none text-dark">東歐美景</a>
+                    <a href="../usa.html" class="text-decoration-none text-dark">美國</a>
+                </div>
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold text-rose">Tcarval</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column gap-3">
+                <a href="../japan.html" class="text-decoration-none text-dark p-2">日本</a>
+                <a href="../korea.html" class="text-decoration-none text-rose fw-semibold p-2">韓國</a>
+                <a href="../thailand.html" class="text-decoration-none text-dark p-2">泰國</a>
+                <a href="../eastern-europe.html" class="text-decoration-none text-dark p-2">東歐美景</a>
+                <a href="../usa.html" class="text-decoration-none text-dark p-2">美國</a>
+                <hr>
+                <a href="../more.html" class="text-decoration-none text-muted p-2">更多</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar border-end d-none d-md-block" style="width: 240px; height: calc(100vh - 65px); position: sticky; top: 65px;">
+            <nav class="p-3">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="../japan.html" class="d-block p-2 rounded text-decoration-none">1. 日本</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../korea.html" class="d-block p-2 rounded text-decoration-none active">2. 韓國</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../thailand.html" class="d-block p-2 rounded text-decoration-none">3. 泰國</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../eastern-europe.html" class="d-block p-2 rounded text-decoration-none">4. 東歐美景</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../usa.html" class="d-block p-2 rounded text-decoration-none">5. 美國</a>
+                    </li>
+                </ul>
+                <hr>
+                <a href="../more.html" class="d-block p-2 text-decoration-none text-muted">更多</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4">
+            <div class="container">
+                <div class="d-flex align-items-center mb-4">
+                    <a href="../korea.html" class="me-2 text-dark">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <h1 class="fs-3 fw-bold mb-0">釜山冬季之旅</h1>
+                </div>
+
+                <!-- Article Header -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <div class="avatar">
+                                <img src="../images/avatars/travel-writer.jpg" alt="旅遊作家">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-semibold">旅遊作家</span>
+                                    <span class="text-rose small">· 追蹤</span>
+                                </div>
+                                <div class="text-muted small">更新於 2024年2月10日</div>
+                            </div>
+                            <div class="ms-auto">
+                                <button class="btn btn-sm btn-outline-secondary rounded-pill">
+                                    <i class="bi bi-bookmark"></i> 收藏
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-pill ms-2">
+                                    <i class="bi bi-share"></i> 分享
+                                </button>
+                            </div>
+                        </div>
+
+                        <h2 class="fs-2 fw-bold mb-3">釜山冬季之旅：海濱城市的浪漫與美食</h2>
+                        <p class="lead mb-4">冬季的釜山，少了夏日的喧囂，多了一份寧靜與浪漫。從溫暖的海雲台溫泉到色彩繽紛的甘川文化村，從熱氣騰騰的豬肉湯飯到新鮮的海鮮，這座韓國第二大城市在寒冷的季節裡展現出獨特的魅力。</p>
+
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <img src="../images/korea/busan-winter-panorama.jpg" alt="冬季釜山全景" class="img-fluid rounded w-100" style="max-height: 500px; object-fit: cover;">
+                            </div>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="table-of-contents mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">目錄</h3>
+                            <ul>
+                                <li><a href="#introduction">釜山冬季簡介</a></li>
+                                <li><a href="#weather">冬季天氣與穿搭建議</a></li>
+                                <li><a href="#attractions">冬季必訪景點</a></li>
+                                <li><a href="#festivals">冬季節慶活動</a></li>
+                                <li><a href="#food">冬季必嚐美食</a></li>
+                                <li><a href="#accommodation">住宿推薦</a></li>
+                                <li><a href="#transportation">交通指南</a></li>
+                                <li><a href="#itinerary">4天3夜行程規劃</a></li>
+                                <li><a href="#tips">實用旅行貼士</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Introduction -->
+                <section id="introduction" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">釜山冬季簡介</h3>
+                            <p>釜山，這座韓國第二大城市，位於朝鮮半島的東南端，是一個擁有美麗海岸線、豐富文化和美食的港口城市。冬季的釜山，雖然氣溫較低，但相比韓國其他地區，這裡的冬天相對溫和，很少下雪，是避開首爾嚴寒的絕佳選擇。</p>
+                            
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <p>冬季造訪釜山的優勢：</p>
+                                    <ul>
+                                        <li><strong>遊客較少</strong>：相比夏季，冬季的釜山遊客明顯減少，可以更輕鬆地遊覽各大景點。</li>
+                                        <li><strong>獨特體驗</strong>：冬季限定的活動和景觀，如海雲台溫泉節、太宗台的冬季花朵等。</li>
+                                        <li><strong>美食季節</strong>：寒冷的天氣是品嚐釜山熱騰騰的豬肉湯飯和海鮮火鍋的最佳時機。</li>
+                                        <li><strong>優惠價格</strong>：淡季旅遊，酒店和機票價格通常較為優惠。</li>
+                                        <li><strong>浪漫氛圍</strong>：冬季的釜山，尤其是夜晚的海岸線和光復路的燈飾，營造出浪漫的氛圍。</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../images/korea/busan-winter-beach.jpg" alt="冬季釜山海灘" class="img-fluid rounded w-100 h-100" style="object-fit: cover;">
+                                </div>
+                            </div>
+
+                            <p>釜山的冬季（12月至2月）雖然不如夏季那樣熱鬧，但城市依然充滿活力。海雲台和廣安里海灘在冬季呈現出與夏季完全不同的寧靜美景，甘川文化村的彩色房屋在冬日陽光下顯得格外明亮，而釜山的室內景點，如新世界百貨和釜山電影博物館，則為遊客提供了避寒的好去處。</p>
+                            
+                            <p>此外，冬季的釜山還有許多特色活動，如海雲台溫泉節和聖誕燈飾展，為這座城市增添了節日氛圍。無論是欣賞冬日海景，還是在溫暖的咖啡館裡品嚐熱飲，冬季的釜山都能給遊客帶來難忘的體驗。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weather and Packing -->
+                <section id="weather" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">冬季天氣與穿搭建議</h3>
+                            <p>了解釜山的冬季天氣和適當的穿著是確保旅行舒適的關鍵。雖然釜山的冬天相對溫和，但仍需做好保暖準備。</p>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-4">
+                                    <div class="card weather-card h-100 border-0 shadow-sm bg-light">
+                                        <div class="card-body text-center p-4">
+                                            <h4 class="fs-5 fw-bold mb-3">12月</h4>
+                                            <div class="temp-icon mb-2 text-primary">
+                                                <i class="bi bi-thermometer-half"></i>
+                                            </div>
+                                            <div class="temp-range mb-2">3°C ~ 11°C</div>
+                                            <p class="mb-2">初冬，天氣轉涼但尚未嚴寒</p>
+                                            <div class="d-flex justify-content-center gap-2">
+                                                <span class="badge bg-primary">偶有降雨</span>
+                                                <span class="badge bg-info text-dark">少量降雪</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card weather-card h-100 border-0 shadow-sm bg-light">
+                                        <div class="card-body text-center p-4">
+                                            <h4 class="fs-5 fw-bold mb-3">1月</h4>
+                                            <div class="temp-icon mb-2 text-info">
+                                                <i class="bi bi-thermometer-low"></i>
+                                            </div>
+                                            <div class="temp-range mb-2">0°C ~ 7°C</div>
+                                            <p class="mb-2">最冷月份，但較少降雪</p>
+                                            <div class="d-flex justify-content-center gap-2">
+                                                <span class="badge bg-primary">少量降雨</span>
+                                                <span class="badge bg-info text-dark">偶有降雪</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card weather-card h-100 border-0 shadow-sm bg-light">
+                                        <div class="card-body text-center p-4">
+                                            <h4 class="fs-5 fw-bold mb-3">2月</h4>
+                                            <div class="temp-icon mb-2 text-primary">
+                                                <i class="bi bi-thermometer"></i>
+                                            </div>
+                                            <div class="temp-range mb-2">1°C ~ 9°C</div>
+                                            <p class="mb-2">逐漸回暖，春天的氣息開始顯現</p>
+                                            <div class="d-flex justify-content-center gap-2">
+                                                <span class="badge bg-primary">少量降雨</span>
+                                                <span class="badge bg-info text-dark">極少降雪</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-5 fw-bold mb-3">冬季穿搭建議</h4>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">基本穿搭</h5>
+                                            <ul class="mb-0">
+                                                <li><strong>外套</strong>：保暖羽絨服或厚毛呢大衣是必備的</li>
+                                                <li><strong>中層</strong>：毛衣、衛衣或保暖內搭</li>
+                                                <li><strong>底層</strong>：保暖內衣，建議選擇排汗材質</li>
+                                                <li><strong>褲子</strong>：厚牛仔褲或保暖長褲</li>
+                                                <li><strong>鞋子</strong>：防滑保暖的靴子，最好是防水的</li>
+                                                <li><strong>配件</strong>：圍巾、手套、帽子和保暖襪</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">特別提醒</h5>
+                                            <ul class="mb-0">
+                                                <li>釜山的風較大，尤其是海邊地區，建議攜帶防風外套</li>
+                                                <li>多層穿搭是關鍵，室內外溫差大，可以根據需要增減衣物</li>
+                                                <li>海邊活動時，風會讓體感溫度更低，需要更加保暖</li>
+                                                <li>雖然降雪較少，但仍建議攜帶防水鞋和雨傘</li>
+                                                <li>如計劃參加溫泉活動，別忘了帶泳衣</li>
+                                                <li>太陽鏡在晴天也很有用，冬日陽光反射在海面上會很刺眼</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info">
+                                <div class="d-flex">
+                                    <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>小提示</strong>
+                                        <p class="mb-0">釜山的冬季天氣變化較大，建議出發前查看最新天氣預報。此外，韓國室內暖氣充足，進入室內場所時可能需要脫去厚重外套。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Winter Attractions -->
+                <section id="attractions" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">冬季必訪景點</h3>
+                            <p>冬季的釜山有許多值得一訪的景點，從溫暖的溫泉到壯觀的海景，從文化村到現代購物中心，這座城市在寒冷的季節裡依然魅力四射。</p>
+
+                            <div class="row g-4">
+                                <!-- Haeundae Beach -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card attraction-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/haeundae-winter.jpg" alt="冬季海雲台" class="attraction-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">海雲台海灘 (Haeundae Beach)</h4>
+                                            <p class="text-muted small mb-2">地址: 부산 해운대구 해운대해변로 264</p>
+                                            <p class="mb-0">夏季擁擠的海灘在冬天變得寧靜而浪漫。冬日的陽光灑在沙灘上，海風雖冷但景色壯觀。附近的海雲台溫泉是冬季的亮點，可以在寒冷的天氣裡享受溫暖的泡湯體驗。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">海灘</span>
+                                                <span class="text-muted small">推薦指數: ★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Gamcheon Culture Village -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card attraction-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/gamcheon-winter.jpg" alt="冬季甘川文化村" class="attraction-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">甘川文化村 (Gamcheon Culture Village)</h4>
+                                            <p class="text-muted small mb-2">地址: 부산 사하구 감내2로 203</p>
+                                            <p class="mb-0">被稱為「韓國聖托里尼」的甘川文化村，在冬季陽光下色彩更加鮮明。彩色房屋沿著山坡層層疊疊，冬季遊客較少，可以更悠閒地探索小巷和藝術裝置。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">文化景點</span>
+                                                <span class="text-muted small">推薦指數: ★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Taejongdae -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card attraction-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/taejongdae-winter.jpg" alt="冬季太宗台" class="attraction-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">太宗台 (Taejongdae)</h4>
+                                            <p class="text-muted small mb-2">地址: 부산 영도구 전망로 24</p>
+                                            <p class="mb-0">這個位於影島的自然公園，以其壯觀的懸崖和燈塔而聞名。冬季的太宗台，海景更加清澈壯觀，而且冬季特有的山茶花在此盛開，為冬日增添一抹亮色。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">自然景觀</span>
+                                                <span class="text-muted small">推薦指數: ★★★★☆</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Busan Tower -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card attraction-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/busan-tower-winter.jpg" alt="冬季釜山塔" class="attraction-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">釜山塔 (Busan Tower)</h4>
+                                            <p class="text-muted small mb-2">地址: 부산 중구 용두산길 37-55</p>
+                                            <p class="mb-0">位於龍頭山公園的釜山塔，是欣賞釜山全景的絕佳地點。冬季晴朗的日子，視野特別清晰，可以遠眺釜山港和周圍的山脈。夜晚的塔燈更是美麗，尤其是節日期間。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">觀景台</span>
+                                                <span class="text-muted small">推薦指數: ★★★★☆</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Shinsegae Centum City -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card attraction-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/shinsegae-centum.jpg" alt="新世界百貨" class="attraction-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">新世界百貨 (Shinsegae Centum City)</h4>
+                                            <p class="text-muted small mb-2">地址: 부산 해운대구 센텀남대로 35</p>
+                                            <p class="mb-0">世界最大的百貨公司，是冬季避寒的理想場所。除了購物，這裡還有美食廣場、水療中心、冰場和電影院等設施，可以在溫暖的室內度過一整天。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">購物</span>
+                                                <span class="text-muted small">推薦指數: ★★★★☆</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Haedong Yonggungsa Temple -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card attraction-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/yonggungsa-winter.jpg" alt="冬季海東龍宮寺" class="attraction-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">海東龍宮寺 (Haedong Yonggungsa)</h4>
+                                            <p class="text-muted small mb-2">地址: 부산 기장군 기장읍 용궁길 86</p>
+                                            <p class="mb-0">位於海邊懸崖上的佛教寺廟，是韓國少數幾個臨海的寺廟之一。冬季的海東龍宮寺遊客較少，可以更加寧靜地欣賞寺廟和海景的結合，尤其是日出時分。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">寺廟</span>
+                                                <span class="text-muted small">推薦指數: ★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-lightbulb-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>冬季景點小貼士</strong>
+                                        <p class="mb-0">冬季的釜山日照時間較短，建議提前規劃行程，將戶外景點安排在日間，室內景點安排在早晚。此外，許多景點在冬季有特別的燈光裝飾，夜晚也很值得一遊。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Winter Festivals -->
+                <section id="festivals" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">冬季節慶活動</h3>
+                            <p>冬季的釜山舉辦多種特色節慶活動，為寒冷的季節增添溫暖與歡樂。以下是幾個值得參加的冬季節慶：</p>
+
+                            <div class="row g-4 mb-4">
+                                <!-- Haeundae Hot Spring Festival -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/hot-spring-festival.jpg" alt="海雲台溫泉節" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">海雲台溫泉節</h4>
+                                                    <p class="text-muted small">時間：12月中旬至次年1月初</p>
+                                                    <p>釜山最著名的冬季節慶之一，以海雲台的溫泉為主題。活動包括戶外溫泉足浴體驗、溫泉美食節、文化表演和燈光秀等。最特別的是沙灘上的溫泉足浴區，遊客可以在欣賞冬季海景的同時，泡暖腳。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Busan Christmas Tree Festival -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/christmas-tree-festival.jpg" alt="釜山聖誕樹節" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">釜山聖誕樹節</h4>
+                                                    <p class="text-muted small">時間：12月初至次年1月初</p>
+                                                    <p>在光復路舉行的聖誕節慶活動，整條街道被裝飾成聖誕燈海。除了燈飾，還有聖誕市集、音樂表演和各種互動活動。夜晚的光復路尤其美麗，是拍攝冬季釜山美照的絕佳地點。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Busan Polar Bear Swimming Festival -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/polar-bear-swim.jpg" alt="釜山北極熊游泳節" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">釜山北極熊游泳節</h4>
+                                                    <p class="text-muted small">時間：1月初</p>
+                                                    <p>在海雲台海灘舉行的特色活動，參與者在寒冷的冬季跳入海中游泳，象徵著迎接新年的勇氣和活力。這個活動吸引了大量當地人和遊客參與，場面壯觀而有趣。即使不參與，觀看也是一種特別的體驗。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Busan New Year Sunrise Festival -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/sunrise-festival.jpg" alt="釜山新年日出節" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">釜山新年日出節</h4>
+                                                    <p class="text-muted small">時間：12月31日至1月1日</p>
+                                                    <p>在海雲台和廣安里海灘舉行的跨年活動，人們聚集在海灘上迎接新年的第一縷陽光。活動包括倒數計時、煙火表演、祈福儀式和文化表演。在海邊迎接新年日出是韓國的傳統，象徵著新的開始和好運。</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-calendar-event me-2 fs-5"></i>
+                                    <div>
+                                        <strong>節慶小貼士</strong>
+                                        <p class="mb-0">冬季節慶的具體日期可能每年略有不同，建議出發前查詢最新資訊。參加戶外節慶活動時，記得穿著足夠保暖的衣物，並可能需要提前到達以獲得好位置，尤其是跨年和日出活動。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Winter Food -->
+                <section id="food" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">冬季必嚐美食</h3>
+                            <p>釜山作為韓國的海港城市，以其新鮮的海鮮和獨特的地方料理而聞名。冬季是品嚐熱騰騰的湯品和海鮮的最佳時節，以下是幾道冬季必嚐的釜山美食：</p>
+
+                            <div class="row g-4">
+                                <!-- Dwaeji Gukbap -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/dwaeji-gukbap.jpg" alt="豬肉湯飯" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">豬肉湯飯 (돼지국밥)</h4>
+                                                    <p>釜山最著名的地方料理，由豬骨和豬肉熬製的濃湯配上白飯。這道湯品在寒冷的冬天特別受歡迎，湯頭濃郁，肉質鮮嫩，配上泡菜更是絕配。</p>
+                                                    <p class="text-muted small mb-0">推薦餐廳：松亭3代豬肉湯飯、富平豬肉湯飯</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Eomuk (Fish Cake) -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/eomuk.jpg" alt="魚餅湯" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">魚餅湯 (어묵)</h4>
+                                                    <p>釜山的魚餅以其新鮮和口感而聞名。冬季街頭常見的魚餅攤，提供熱騰騰的魚餅湯，是寒冷天氣裡的完美小吃。釜山的魚餅比其他地區的更加鮮美，值得一試。</p>
+                                                    <p class="text-muted small mb-0">推薦地點：南浦洞魚餅一條街、SAMJIN魚餅博物館</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Haemul Jeongol -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/haemul-jeongol.jpg" alt="海鮮火鍋" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">海鮮火鍋 (해물전골)</h4>
+                                                    <p>釜山的海鮮火鍋使用各種新鮮的海鮮，如蝦、貝類、魷魚和魚片等，加上豐富的蔬菜和辣醬熬製而成。這道料理適合冬季享用，熱氣騰騰的火鍋不僅美味，還能驅寒保暖。</p>
+                                                    <p class="text-muted small mb-0">推薦餐廳：札嘎其市場內的海鮮餐廳、海雲台海鮮街</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Milmyeon -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/milmyeon.jpg" alt="密麵" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">密麵 (밀면)</h4>
+                                                    <p>釜山特色麵食，使用小麥粉製成的麵條，配以牛肉或豬肉湯底。冬季供應的熱密麵，湯底濃郁，麵條Q彈，是溫暖身心的理想選擇。這道料理源於韓戰時期，現已成為釜山的代表美食之一。</p>
+                                                    <p class="text-muted small mb-0">推薦餐廳：金福密麵、高麗密麵</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-5 fw-bold mt-4 mb-3">推薦美食區</h4>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/jagalchi-market.jpg" alt="札嘎其市場" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">札嘎其市場 (Jagalchi Market)</h5>
+                                            <p class="card-text">韓國最大的海鮮市場，冬季是品嚐新鮮海鮮的最佳時節。市場內有許多餐廳，可以選購海鮮後請餐廳烹飪，或直接在餐廳點餐。推薦嘗試：生魚片、烤魚和海鮮湯。</p>
+                                            <p class="text-muted small">營業時間: 上午8點至下午10點</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/gukje-market.jpg" alt="國際市場" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">國際市場 (Gukje Market)</h5>
+                                            <p class="card-text">釜山最古老的市場之一，提供各種街頭小吃和傳統韓食。冬季特別推薦熱騰騰的糖餅、魚餅湯和辣炒年糕。市場內還有許多小餐館，提供豬肉湯飯等釜山特色料理。</p>
+                                            <p class="text-muted small">營業時間: 上午9點至晚上8點</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/seomyeon.jpg" alt="西面美食街" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">西面美食街 (Seomyeon Food Alley)</h5>
+                                            <p class="card-text">釜山的美食中心，擁有各種餐廳和小吃攤。這裡有許多室內餐廳，冬季可以在溫暖的環境中享用美食。推薦嘗試：韓式炸雞、烤肉和各種湯品。夜晚的西面更是熱鬧，是品嚐宵夜的好去處。</p>
+                                            <p class="text-muted small">營業時間: 中午至深夜</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-cup-hot-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>美食小貼士</strong>
+                                        <p class="mb-0">釜山的海鮮在冬季特別新鮮，尤其是蟹類和貝類。此外，許多餐廳提供室內烤肉，是冬季聚餐的理想選擇。記得嘗試釜山特有的調味醬和小菜，它們與首爾等地區有所不同。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Accommodation -->
+                <section id="accommodation" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">住宿推薦</h3>
+                            <p>冬季造訪釜山，選擇合適的住宿區域和酒店尤為重要。以下是幾個推薦的住宿區域和酒店，適合不同預算和需求的旅客：</p>
+
+                            <h4 class="fs-5 fw-bold mb-3">推薦住宿區域</h4>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/haeundae-area.jpg" alt="海雲台區" class="card-img-top" style="height: 150px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">海雲台區 (Haeundae)</h5>
+                                            <p class="card-text">釜山最受歡迎的住宿區域，靠近海灘和溫泉。冬季住在這裡，可以方便參加溫泉節等活動，且有許多室內設施如購物中心和餐廳。</p>
+                                            <p class="text-muted small mb-0">適合：家庭旅行、度假型旅客</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/seomyeon-area.jpg" alt="西面區" class="card-img-top" style="height: 150px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">西面區 (Seomyeon)</h5>
+                                            <p class="card-text">釜山的市中心，交通便利，購物和美食選擇豐富。冬季住在這裡，可以避免長時間在戶外移動，且地鐵連接各主要景點。</p>
+                                            <p class="text-muted small mb-0">適合：首次訪釜、購物愛好者</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/nampo-area.jpg" alt="南浦區" class="card-img-top" style="height: 150px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">南浦區 (Nampo)</h5>
+                                            <p class="card-text">靠近札嘎其市場和國際市場，是體驗釜山傳統文化和美食的理想區域。冬季的光復路聖誕燈飾也在這一帶。</p>
+                                            <p class="text-muted small mb-0">適合：美食愛好者、文化探索者</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/gwangalli-area.jpg" alt="廣安里區" class="card-img-top" style="height: 150px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">廣安里區 (Gwangalli)</h5>
+                                            <p class="card-text">較為寧靜的海灘區域，可以欣賞廣安大橋的美麗夜景。冬季的廣安里較少遊客，是尋求寧靜度假的好選擇。</p>
+                                            <p class="text-muted small mb-0">適合：情侶旅行、攝影愛好者</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-5 fw-bold mb-3">酒店推薦</h4>
+                            <div class="row g-4">
+                                <!-- Luxury Hotel -->
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/paradise-hotel.jpg" alt="天堂酒店" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title fw-bold mb-0">天堂酒店釜山 (Paradise Hotel)</h5>
+                                                <span class="badge bg-rose">豪華</span>
+                                            </div>
+                                            <p class="text-muted small mb-2">地址: 부산 해운대구 해운대해변로 296</p>
+                                            <p class="card-text">位於海雲台海灘旁的五星級酒店，擁有室內泳池、溫泉SPA和多家餐廳。冬季特別推薦其溫泉設施，可以在寒冷的天氣裡享受溫暖的泡湯體驗。</p>
+                                            <p class="text-muted small mb-0">價格範圍: ₩250,000-400,000/晚</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mid-range Hotel -->
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/lotte-hotel.jpg" alt="樂天酒店" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title fw-bold mb-0">釜山樂天酒店 (Lotte Hotel)</h5>
+                                                <span class="badge bg-primary">中高檔</span>
+                                            </div>
+                                            <p class="text-muted small mb-2">地址: 부산 부산진구 가야대로 772</p>
+                                            <p class="card-text">位於西面商業區的四星級酒店，交通便利，靠近地鐵站和購物中心。酒店設施完善，有健身中心和多家餐廳，冬季提供特別的暖心服務。</p>
+                                            <p class="text-muted small mb-0">價格範圍: ₩150,000-250,000/晚</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Budget Hotel -->
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/ibis-budget.jpg" alt="宜必思快捷酒店" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <h5 class="card-title fw-bold mb-0">宜必思快捷釜山海雲台 (Ibis Budget)</h5>
+                                                <span class="badge bg-success">經濟實惠</span>
+                                            </div>
+                                            <p class="text-muted small mb-2">地址: 부산 해운대구 해운대로 570</p>
+                                            <p class="card-text">位於海雲台區的經濟型酒店，步行可達海灘和地鐵站。房間雖小但功能齊全，冬季有良好的暖氣系統。酒店提供免費WiFi和簡單早餐，是預算有限旅客的理想選擇。</p>
+                                            <p class="text-muted small mb-0">價格範圍: ₩80,000-120,000/晚</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>住宿小貼士</strong>
+                                        <p class="mb-0">冬季是釜山的旅遊淡季，許多酒店提供特別優惠。建議提前預訂，尤其是計劃在節日期間（如聖誕節和新年）訪問的旅客。選擇酒店時，考慮其暖氣系統和室內設施，以確保在寒冷天氣中的舒適度。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Transportation -->
+                <section id="transportation" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">交通指南</h3>
+                            <p>釜山擁有便捷的公共交通系統，即使在冬季也能輕鬆遊覽各大景點。以下是冬季訪問釜山的交通建議：</p>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-train-front me-2 text-rose"></i>地鐵</h4>
+                                            <p>釜山地鐵是遊覽城市的最佳方式，尤其是在寒冷的冬季：</p>
+                                            <ul class="mb-0">
+                                                <li>共有4條線路，覆蓋大部分主要景點</li>
+                                                <li>車廂內有暖氣，是冬季出行的舒適選擇</li>
+                                                <li>單程票價約₩1,500，可使用T-money卡享受折扣</li>
+                                                <li>運營時間：早上5:30至午夜（視線路而定）</li>
+                                                <li>1號線連接釜山站、南浦洞和西面</li>
+                                                <li>2號線連接海雲台和廣安里</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-bus-front me-2 text-rose"></i>公交車</h4>
+                                            <p>釜山的公交系統覆蓋範圍廣，可到達地鐵不便抵達的地點：</p>
+                                            <ul class="mb-0">
+                                                <li>車內有暖氣，但可能需要在戶外等候</li>
+                                                <li>票價根據距離而定，約₩1,300-2,000</li>
+                                                <li>同樣可使用T-money卡</li>
+                                                <li>海雲台循環巴士（Haeundae Beach Bus）是遊覽海雲台區的便捷選擇</li>
+                                                <li>城市觀光巴士提供主要景點之間的直達服務，冬季運營時間可能有調整</li>
+                                                <li>部分山區路線在冬季可能因天氣原因臨時調整</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-taxi-front me-2 text-rose"></i>計程車</h4>
+                                            <p>在寒冷的冬季，計程車是一個舒適的選擇，尤其是夜間或攜帶行李時：</p>
+                                            <ul class="mb-0">
+                                                <li>起步價約₩3,800，之後按距離和時間計費</li>
+                                                <li>夜間（午夜至早上4點）有20%的附加費</li>
+                                                <li>大多數司機不會說英語，建議準備目的地的韓文地址</li>
+                                                <li>可使用KakaoTaxi應用程序叫車，支持英文界面</li>
+                                                <li>黑色豪華計程車費用較高，但服務更好，司機通常會說一些英語</li>
+                                                <li>冬季雨雪天氣可能導致計程車需求增加，建議提前預約</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-credit-card me-2 text-rose"></i>交通卡</h4>
+                                            <p>使用交通卡可以方便地搭乘各種公共交通工具：</p>
+                                            <ul class="mb-0">
+                                                <li>T-money卡可在便利店、地鐵站購買，押金₩2,500</li>
+                                                <li>使用交通卡可享受轉乘折扣</li>
+                                                <li>也可用於便利店、部分咖啡店和自動販賣機付款</li>
+                                                <li>釜山觀光卡提供無限次乘坐公共交通和部分景點折扣</li>
+                                                <li>1日卡₩15,000，2日卡₩25,000，3日卡₩35,000</li>
+                                                <li>冬季特別推薦購買觀光卡，可避免多次購票和在戶外等待</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>冬季交通注意事項</strong>
+                                        <p class="mb-0">釜山冬季雖然較少下雪，但偶爾的雨雪天氣可能影響交通。建議下載Naver Map或Kakao Map應用程序，獲取實時交通信息。此外，冬季日照時間較短，建議避免太晚出行，尤其是前往山區或較偏遠的景點。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Itinerary -->
+                <section id="itinerary" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">4天3夜行程規劃</h3>
+                            <p>以下是一個為期4天3夜的冬季釜山行程建議，涵蓋了主要景點和特色體驗，同時考慮了冬季天氣因素：</p>
+
+                            <div class="itinerary-day mb-4">
+                                <h4 class="fs-5 fw-bold mb-3">第一天：海雲台區探索</h4>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-rose me-2">上午</span>
+                                            <h5 class="mb-0 fw-bold">海雲台海灘與溫泉</h5>
+                                        </div>
+                                        <p>早餐後前往海雲台海灘，欣賞冬季海景。如果正值溫泉節，可以體驗沙灘上的溫泉足浴。之後前往附近的海雲台溫泉，享受溫暖的泡湯體驗，緩解旅途疲勞。</p>
+                                        <p class="text-muted small mb-0">推薦：海雲台溫泉中心，門票約₩8,000-15,000</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-primary me-2">中午</span>
+                                            <h5 class="mb-0 fw-bold">海雲台市場午餐</h5>
+                                        </div>
+                                        <p>在海雲台傳統市場享用午餐，品嚐當地特色美食如豬肉湯飯、海鮮煎餅和魚餅湯。市場內有許多小吃攤和餐館，提供各種熱騰騰的冬季美食。</p>
+                                        <p class="text-muted small mb-0">預算：₩10,000-15,000/人</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-info text-dark me-2">下午</span>
+                                            <h5 class="mb-0 fw-bold">新世界百貨與冬季購物</h5>
+                                        </div>
+                                        <p>下午前往世界最大的百貨公司——新世界百貨釜山店，這裡不僅可以購物，還有美食廣場、水族館和室內冰場等設施。冬季是韓國購物季，可以找到許多優惠。</p>
+                                        <p class="text-muted small mb-0">地點：海雲台區，可乘坐地鐵2號線到達</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mt-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-dark me-2">晚上</span>
+                                            <h5 class="mb-0 fw-bold">廣安大橋夜景與晚餐</h5>
+                                        </div>
+                                        <p>晚上前往廣安里海灘，欣賞點亮的廣安大橋夜景，這是釜山最著名的夜景之一。之後在海灘附近的餐廳享用海鮮晚餐，冬季的海鮮特別新鮮美味。</p>
+                                        <p class="text-muted small mb-0">交通：從海雲台可乘坐計程車或地鐵前往廣安里</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="itinerary-day mb-4">
+                                <h4 class="fs-5 fw-bold mb-3">第二天：釜山文化探索</h4>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-rose me-2">上午</span>
+                                            <h5 class="mb-0 fw-bold">海東龍宮寺</h5>
+                                        </div>
+                                        <p>早餐後前往海東龍宮寺，這是韓國少數幾個臨海的寺廟之一。冬季的海東龍宮寺遊客較少，可以更加寧靜地欣賞寺廟和海景的結合。如果天氣晴朗，還可以欣賞到美麗的日出。</p>
+                                        <p class="text-muted small mb-0">交通：可乘坐181路公交車前往，車程約1小時</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-primary me-2">中午</span>
+                                            <h5 class="mb-0 fw-bold">松亭三代豬肉湯飯</h5>
+                                        </div>
+                                        <p>返回市區後，前往著名的松亭三代豬肉湯飯店享用午餐。這家餐廳以正宗的釜山豬肉湯飯而聞名，熱騰騰的湯品是寒冷冬日的完美選擇。</p>
+                                        <p class="text-muted small mb-0">地址：釜山鎮區，價格約₩8,000-10,000/人</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-info text-dark me-2">下午</span>
+                                            <h5 class="mb-0 fw-bold">甘川文化村</h5>
+                                        </div>
+                                        <p>下午前往甘川文化村，這個彩色的村莊在冬季陽光下格外美麗。漫步於小巷中，欣賞壁畫和藝術裝置，拍攝美麗的照片。冬季遊客較少，可以更悠閒地探索。</p>
+                                        <p class="text-muted small mb-0">交通：可乘坐地鐵1號線到土城站，再轉乘公交車或計程車</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mt-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-dark me-2">晚上</span>
+                                            <h5 class="mb-0 fw-bold">南浦洞與光復路</h5>
+                                        </div>
+                                        <p>晚上前往南浦洞和光復路，這裡在冬季節日期間有美麗的燈光裝飾。可以在BIFF廣場漫步，享用街頭小吃，或在附近的餐廳享用晚餐。如果是聖誕季節，光復路的聖誕燈飾尤為壯觀。</p>
+                                        <p class="text-muted small mb-0">交通：從甘川文化村可乘坐計程車或公交車前往</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="itinerary-day mb-4">
+                                <h4 class="fs-5 fw-bold mb-3">第三天：釜山美食與市場</h4>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-rose me-2">上午</span>
+                                            <h5 class="mb-0 fw-bold">札嘎其市場</h5>
+                                        </div>
+                                        <p>早餐後前往札嘎其市場，這是韓國最大的海鮮市場。冬季是品嚐新鮮海鮮的最佳時節，可以在市場內選購海鮮，請餐廳烹飪，或直接在餐廳點餐。推薦嘗試生魚片、烤魚和海鮮湯。</p>
+                                        <p class="text-muted small mb-0">地址：中區，可乘坐地鐵1號線到札嘎其站</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-primary me-2">中午</span>
+                                            <h5 class="mb-0 fw-bold">國際市場午餐</h5>
+                                        </div>
+                                        <p>在國際市場享用午餐，品嚐各種街頭小吃和傳統韓食。冬季特別推薦熱騰騰的糖餅、魚餅湯和辣炒年糕。市場內還有許多小餐館，提供豬肉湯飯等釜山特色料理。</p>
+                                        <p class="text-muted small mb-0">地點：從札嘎其市場步行可達</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-info text-dark me-2">下午</span>
+                                            <h5 class="mb-0 fw-bold">釜山塔與龍頭山公園</h5>
+                                        </div>
+                                        <p>下午前往龍頭山公園和釜山塔，欣賞釜山全景。冬季晴朗的日子，視野特別清晰，可以遠眺釜山港和周圍的山脈。公園內還有各種文化設施和紀念碑，值得探索。</p>
+                                        <p class="text-muted small mb-0">門票：釜山塔觀景台約₩8,000/人</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mt-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-dark me-2">晚上</span>
+                                            <h5 class="mb-0 fw-bold">西面美食街晚餐</h5>
+                                        </div>
+                                        <p>晚上前往西面美食街，這裡有各種餐廳和小吃攤。冬季可以在溫暖的室內餐廳享用美食，推薦嘗試韓式炸雞、烤肉和各種湯品。西面的夜生活也很豐富，可以體驗釜山的夜間文化。</p>
+                                        <p class="text-muted small mb-0">交通：可乘坐地鐵1號線或2號線到西面站</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="itinerary-day">
+                                <h4 class="fs-5 fw-bold mb-3">第四天：釜山自然風光</h4>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-rose me-2">上午</span>
+                                            <h5 class="mb-0 fw-bold">太宗台</h5>
+                                        </div>
+                                        <p>早餐後前往太宗台，這個位於影島的自然公園以其壯觀的懸崖和燈塔而聞名。冬季的太宗台，海景更加清澈壯觀，而且冬季特有的山茶花在此盛開，為冬日增添一抹亮色。</p>
+                                        <p class="text-muted small mb-0">交通：可乘坐88或101路公交車前往</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-primary me-2">中午</span>
+                                            <h5 class="mb-0 fw-bold">影島海鮮午餐</h5>
+                                        </div>
+                                        <p>在影島的海鮮餐廳享用午餐，品嚐新鮮的海鮮料理。影島以其新鮮的海鮮而聞名，冬季是品嚐螃蟹和貝類的最佳時節。</p>
+                                        <p class="text-muted small mb-0">預算：₩15,000-25,000/人</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-info text-dark me-2">下午</span>
+                                            <h5 class="mb-0 fw-bold">APEC世峰樓與冬柏公園</h5>
+                                        </div>
+                                        <p>下午前往APEC世峰樓和冬柏公園，欣賞現代建築和海景。這裡是2005年APEC峰會的舉辦地，建築設計獨特，周圍的公園環境優美。冬季的公園較為寧靜，是放鬆散步的好去處。</p>
+                                        <p class="text-muted small mb-0">交通：可乘坐地鐵2號線到東百站，再轉乘公交車</p>
+                                    </div>
+                                </div>
+                                <div class="card border-0 shadow-sm mt-3">
+                                    <div class="card-body">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge bg-dark me-2">晚上</span>
+                                            <h5 class="mb-0 fw-bold">海雲台告別晚餐</h5>
+                                        </div>
+                                        <p>返回海雲台區，在海灘附近的餐廳享用告別晚餐。可以選擇一家有海景的餐廳，一邊欣賞夜景，一邊品嚐美食，為釜山之旅畫上完美句點。</p>
+                                        <p class="text-muted small mb-0">推薦：The Bay 101或Paradise Hotel的餐廳</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-calendar-check me-2 fs-5"></i>
+                                    <div>
+                                        <strong>行程調整建議</strong>
+                                        <p class="mb-0">此行程可根據天氣情況靈活調整。如遇雨雪天氣，可將戶外活動調整為室內景點，如釜山電影博物館、樂天百貨或釜山現代美術館等。此外，如果正值特殊節日（如聖誕節或新年），可以將相關節慶活動納入行程中。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Travel Tips -->
+                <section id="tips" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">實用旅行貼士</h3>
+                            <p>以下是一些實用的建議，幫助您在冬季釜山之旅中獲得更好的體驗：</p>
+
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-currency-exchange me-2 text-rose"></i>預算規劃</h4>
+                                            <ul class="mb-0">
+                                                <li><strong>住宿</strong>: 冬季是淡季，酒店價格較為優惠，約₩80,000-250,000/晚</li>
+                                                <li><strong>餐飲</strong>: 每日約₩30,000-50,000/人</li>
+                                                <li><strong>交通</strong>: 每日約₩10,000-15,000/人（使用交通卡）</li>
+                                                <li><strong>景點門票</strong>: 每日約₩10,000-20,000/人</li>
+                                                <li><strong>購物</strong>: 根據個人需求而定</li>
+                                                <li>冬季總體預算比夏季略低，約₩150,000-200,000/人/天</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-cloud-sun me-2 text-rose"></i>天氣應對</h4>
+                                            <ul class="mb-0">
+                                                <li>隨時關注天氣預報，尤其是計劃戶外活動時</li>
+                                                <li>採用多層穿搭，可以根據室內外溫差調整</li>
+                                                <li>攜帶保暖配件如圍巾、手套和帽子</li>
+                                                <li>準備防風防水的外套，釜山海邊風較大</li>
+                                                <li>攜帶潤唇膏和護手霜，預防乾燥</li>
+                                                <li>室內暖氣充足，可能需要攜帶薄長袖</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-translate me-2 text-rose"></i>語言與溝通</h4>
+                                            <ul class="mb-0">
+                                                <li>釜山的英語普及率不如首爾，建議學習一些基本的韓語短句</li>
+                                                <li>準備目的地的韓文地址，方便向當地人問路或搭乘計程車</li>
+                                                <li>下載翻譯應用程序，如Papago或Google翻譯</li>
+                                                <li>在觀光區，可以尋找旅遊信息中心獲取英語幫助</li>
+                                                <li>大多數年輕人能理解簡單的英語，但可能害羞回答</li>
+                                                <li>攜帶圖片或使用手勢也是有效的溝通方式</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-phone me-2 text-rose"></i>實用應用程序</h4>
+                                            <ul class="mb-0">
+                                                <li><strong>Naver Map</strong>: 比Google Maps更詳細的韓國地圖</li>
+                                                <li><strong>Kakao Map</strong>: 另一個流行的韓國地圖應用</li>
+                                                <li><strong>Kakao T</strong>: 叫車應用，支持英文界面</li>
+                                                <li><strong>Papago</strong>: 由Naver開發的翻譯應用，韓英翻譯準確度高</li>
+                                                <li><strong>Mangoplate</strong>: 韓國版的Yelp，提供餐廳評價和推薦</li>
+                                                <li><strong>KorailTalk</strong>: 預訂火車票的應用，如計劃前往其他城市</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row g-4 mt-2">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-shield-check me-2 text-rose"></i>安全與健康</h4>
+                                            <ul class="mb-0">
+                                                <li>釜山是相對安全的城市，但仍需注意個人財物安全</li>
+                                                <li>攜帶常用藥品，如感冒藥、止痛藥和腸胃藥</li>
+                                                <li>冬季容易感冒，建議勤洗手並考慮戴口罩</li>
+                                                <li>記下緊急聯絡電話：119（消防和救護），112（警察）</li>
+                                                <li>購買旅遊保險，涵蓋醫療和行程變更</li>
+                                                <li>注意防滑，尤其是雨雪天氣時</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-lightbulb me-2 text-rose"></i>其他實用建議</h4>
+                                            <ul class="mb-0">
+                                                <li>提前預訂熱門餐廳，尤其是節假日期間</li>
+                                                <li>攜帶便攜式充電器，冬季使用手機導航會快速耗電</li>
+                                                <li>考慮購買當地SIM卡或租用WiFi蛋，保持網絡連接</li>
+                                                <li>大多數商店接受信用卡，但小攤販可能只收現金</li>
+                                                <li>韓國的插座為雙圓孔，電壓為220V，可能需要轉換器</li>
+                                                <li>冬季日落較早，約下午5點左右，安排行程時需考慮</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>特別提醒</strong>
+                                        <p class="mb-0">冬季的釜山雖然較少下雪，但偶爾的雨雪天氣可能影響行程。建議保持行程彈性，準備一些室內備選方案。此外，韓國的農曆新年（通常在1月底或2月初）期間，許多商店和餐廳可能休息，需提前了解營業情況。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 section-title">結語</h3>
+                            <p>冬季的釜山，少了夏日的喧囂，多了一份寧靜與浪漫。從溫暖的海雲台溫泉到色彩繽紛的甘川文化村，從熱氣騰騰的豬肉湯飯到新鮮的海鮮，這座韓國第二大城市在寒冷的季節裡展現出獨特的魅力。</p>
+                            <p>冬季造訪釜山有諸多優勢：遊客較少、價格更優惠、美食更誘人，還有冬季限定的活動和景觀。雖然天氣較冷，但只要做好充分準備，釜山的冬季之旅一定會給您留下難忘的回憶。</p>
+                            <p>無論您是喜歡文化探索、美食體驗、購物娛樂還是自然風光，釜山都能滿足您的需求。希望這篇指南能幫助您規劃一次完美的釜山冬季之旅，體驗這座海濱城市的浪漫與美食。</p>
+                            <p class="mb-0">祝您旅途愉快！</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Author Info -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3" style="width: 60px; height: 60px;">
+                                <img src="../images/avatars/travel-writer.jpg" alt="旅遊作家" class="img-fluid rounded-circle">
+                            </div>
+                            <div>
+                                <h4 class="fs-5 fw-bold mb-1">旅遊作家</h4>
+                                <p class="text-muted small mb-2">專業旅遊撰稿人 | 韓國文化愛好者</p>
+                                <p class="mb-0 small">熱愛探索亞洲各地的文化和美食，曾多次造訪韓國，對釜山有特別的情感。相信旅行不只是看風景，更是體驗當地生活方式。</p>
+                            </div>
+                            <button class="btn btn-rose ms-auto">追蹤作者</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <h3 class="fs-4 fw-bold mb-4">相關文章</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow">
+                            <img src="../images/korea/korea-food-guide.jpg" alt="韓國美食指南" class="card-img-top" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h4 class="fs-5 fw-bold">韓國美食完全指南：從傳統料理到街頭小吃</h4>
+                                <p class="text-muted small">2024年3月15日</p>
+                                <p class="card-text">探索韓國豐富多彩的美食文化，從必嚐的經典料理到隱藏的美食寶藏，讓您的韓國之旅更加美味難忘...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="korea-food-guide.html" class="btn btn-outline-rose btn-sm">閱讀更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow">
+                            <img src="../images/korea/korea-travel-tips.jpg" alt="韓國旅遊小貼士" class="card-img-top" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h4 class="fs-5 fw-bold">韓國旅遊必知：從交通到購物的實用指南</h4>
+                                <p class="text-muted small">2024年1月15日</p>
+                                <p class="card-text">計劃韓國之旅？這篇文章涵蓋了你需要知道的一切，從交通工具到購物攻略，讓你的旅程更加順暢...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="korea-travel-tips.html" class="btn btn-outline-rose btn-sm">閱讀更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow">
+                            <img src="../images/korea/seoul-winter.jpg" alt="首爾冬季之旅" class="card-img-top" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h4 class="fs-5 fw-bold">首爾冬季之旅：韓國首都的雪景與溫暖</h4>
+                                <p class="text-muted small">2023年12月20日</p>
+                                <p class="card-text">探索冬季的首爾，從南山塔的雪景到明洞的購物天堂，體驗韓國首都在白雪覆蓋下的獨特魅力...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="#" class="btn btn-outline-rose btn-sm">閱讀更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <h3 class="fs-4 fw-bold mb-4">留言討論</h3>
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="分享您的想法或提問..."></textarea>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-rose">發表留言</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <div class="avatar me-3">
+                                <img src="../images/avatars/user3.jpg" alt="用戶頭像">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 fw-bold">韓國旅遊愛好者</h5>
+                                    <span class="text-muted ms-2 small">2天前</span>
+                                </div>
+                                <p class="mb-0">感謝分享這麼詳細的釜山冬季旅遊指南！我計劃在1月底去釜山，正好可以參加北極熊游泳節。想請問作者，海雲台溫泉有沒有提供浴巾租借服務？還是需要自己攜帶？</p>
+                            </div>
+                        </div>
+                        <div class="d-flex ms-5 mb-2">
+                            <div class="avatar me-3">
+                                <img src="../images/avatars/travel-writer.jpg" alt="旅遊作家">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 fw-bold">旅遊作家</h5>
+                                    <span class="text-muted ms-2 small">1天前</span>
+                                    <span class="badge bg-rose ms-2">作者</span>
+                                </div>
+                                <p class="mb-0">謝謝你的留言！海雲台溫泉確實提供浴巾租借服務，費用約₩2,000-3,000，但數量可能有限。我個人建議自帶一條小毛巾，韓國的溫泉通常會提供基本的洗浴用品如洗髮水和沐浴露。北極熊游泳節很有趣，但水真的很冷，做好心理準備哦！祝你旅途愉快！</p>
+                            </div>
+                        </div>
+                        <div class="ms-5">
+                            <button class="btn btn-sm btn-light">回覆</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="avatar me-3">
+                                <img src="../images/avatars/user4.jpg" alt="用戶頭像">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 fw-bold">攝影愛好者</h5>
+                                    <span class="text-muted ms-2 small">1週前</span>
+                                </div>
+                                <p class="mb-0">去年冬天去了釜山，甘川文化村真的很適合拍照！不過我想補充一點，冬季的太宗台除了山茶花，還有梅花也很美。另外，如果時間允許，建議去五六島天空步道，冬天遊客少，視野特別清晰，可以看到壯觀的海景。</p>
+                            </div>
+                        </div>
+                        <div class="mt-2 ms-5">
+                            <button class="btn btn-sm btn-light">回覆</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center mb-5">
+                    <button class="btn btn-outline-secondary">查看更多留言</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h3 class="fs-5 fw-bold mb-3">Tcarval</h3>
+                    <p class="text-muted">分享最實用的旅遊攻略、行程規劃與旅遊心得，讓你的旅行更加精彩。</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-muted"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="fs-6 fw-bold mb-3">目的地</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="../japan.html" class="text-decoration-none text-muted">日本</a></li>
+                        <li class="mb-2"><a href="../korea.html" class="text-decoration-none text-muted">韓國</a></li>
+                        <li class="mb-2"><a href="../thailand.html" class="text-decoration-none text-muted">泰國</a></li>
+                        <li class="mb-2"><a href="../eastern-europe.html" class="text-decoration-none text-muted">東歐</a></li>
+                        <li class="mb-2"><a href="../usa.html" class="text-decoration-none text-muted">美國</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="fs-6 fw-bold mb-3">分類</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">行程規劃</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">美食推薦</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">住宿推薦</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">購物指南</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-muted">旅遊攻略</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="fs-6 fw-bold mb-3">訂閱電子報</h4>
+                    <p class="text-muted">獲取最新的旅遊資訊和獨家優惠</p>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="輸入您的電子郵件" required>
+                            <button class="btn btn-rose" type="submit">訂閱</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="text-muted mb-md-0">© 2024 Tcarval. All rights reserved.</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="text-decoration-none text-muted small">隱私政策</a>
+                    <a href="#" class="text-decoration-none text-muted small">使用條款</a>
+                    <a href="#" class="text-decoration-none text-muted small">關於我們</a>
+                    <a href="#" class="text-decoration-none text-muted small">聯絡我們</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    
+    <script>
+        // 添加滾動到目錄項目的平滑效果
+        document.querySelectorAll('.table-of-contents a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韓國美食指南 - Tcarval</title>
+    <meta name="description" content="探索韓國的美食文化，從傳統料理到街頭小吃，讓你的韓國之旅更加美味。">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    <style>
+        .text-rose {
+            color: #e91e63;
+        }
+        .bg-rose {
+            background-color: #e91e63;
+        }
+        .btn-rose {
+            background-color: #e91e63;
+            color: white;
+        }
+        .btn-rose:hover {
+            background-color: #c2185b;
+            color: white;
+        }
+        .border-rose {
+            border-color: #e91e63 !important;
+        }
+        .hover-shadow {
+            transition: all 0.3s ease;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+        }
+        .sidebar a.active {
+            background-color: rgba(233, 30, 99, 0.1);
+            color: #e91e63;
+            font-weight: 600;
+        }
+        .nav-tabs .nav-link.active {
+            color: #e91e63;
+            border-bottom: 2px solid #e91e63;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .nav-tabs .nav-link {
+            border: none;
+        }
+        .food-category {
+            border-left: 4px solid #e91e63;
+            padding-left: 15px;
+        }
+        .dish-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .dish-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .dish-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .table-of-contents {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .table-of-contents a {
+            color: #495057;
+            text-decoration: none;
+        }
+        .table-of-contents a:hover {
+            color: #e91e63;
+        }
+        .food-map {
+            height: 400px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="border-bottom sticky-top bg-white">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="../index.html" class="text-decoration-none">
+                    <h1 class="fs-4 fw-bold text-rose m-0">Tcarval</h1>
+                </a>
+                <div class="d-none d-md-flex gap-4">
+                    <a href="../japan.html" class="text-decoration-none text-dark">日本</a>
+                    <a href="../korea.html" class="text-decoration-none text-rose fw-semibold">韓國</a>
+                    <a href="../thailand.html" class="text-decoration-none text-dark">泰國</a>
+                    <a href="../eastern-europe.html" class="text-decoration-none text-dark">東歐美景</a>
+                    <a href="../usa.html" class="text-decoration-none text-dark">美國</a>
+                </div>
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold text-rose">Tcarval</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column gap-3">
+                <a href="../japan.html" class="text-decoration-none text-dark p-2">日本</a>
+                <a href="../korea.html" class="text-decoration-none text-rose fw-semibold p-2">韓國</a>
+                <a href="../thailand.html" class="text-decoration-none text-dark p-2">泰國</a>
+                <a href="../eastern-europe.html" class="text-decoration-none text-dark p-2">東歐美景</a>
+                <a href="../usa.html" class="text-decoration-none text-dark p-2">美國</a>
+                <hr>
+                <a href="../more.html" class="text-decoration-none text-muted p-2">更多</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar border-end d-none d-md-block" style="width: 240px; height: calc(100vh - 65px); position: sticky; top: 65px;">
+            <nav class="p-3">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="../japan.html" class="d-block p-2 rounded text-decoration-none">1. 日本</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../korea.html" class="d-block p-2 rounded text-decoration-none active">2. 韓國</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../thailand.html" class="d-block p-2 rounded text-decoration-none">3. 泰國</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../eastern-europe.html" class="d-block p-2 rounded text-decoration-none">4. 東歐美景</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../usa.html" class="d-block p-2 rounded text-decoration-none">5. 美國</a>
+                    </li>
+                </ul>
+                <hr>
+                <a href="../more.html" class="d-block p-2 text-decoration-none text-muted">更多</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4">
+            <div class="container">
+                <div class="d-flex align-items-center mb-4">
+                    <a href="../korea.html" class="me-2 text-dark">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <h1 class="fs-3 fw-bold mb-0">韓國美食指南</h1>
+                </div>
+
+                <!-- Article Header -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <div class="avatar">
+                                <img src="../images/avatars/foodie.jpg" alt="美食獵人">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="fw-semibold">美食獵人</span>
+                                    <span class="text-rose small">· 追蹤</span>
+                                </div>
+                                <div class="text-muted small">更新於 2024年3月15日</div>
+                            </div>
+                            <div class="ms-auto">
+                                <button class="btn btn-sm btn-outline-secondary rounded-pill">
+                                    <i class="bi bi-bookmark"></i> 收藏
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary rounded-pill ms-2">
+                                    <i class="bi bi-share"></i> 分享
+                                </button>
+                            </div>
+                        </div>
+
+                        <h2 class="fs-2 fw-bold mb-3">韓國美食完全指南：從傳統料理到街頭小吃</h2>
+                        <p class="lead mb-4">韓國料理以其獨特的風味、豐富的配菜和健康的烹飪方式聞名於世。本指南將帶您探索韓國的美食文化，從必嚐的經典料理到隱藏的美食寶藏，讓您的韓國之旅更加美味難忘。</p>
+
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <img src="../images/korean-food-spread.jpg" alt="韓國美食大集合" class="img-fluid rounded w-100" style="max-height: 500px; object-fit: cover;">
+                            </div>
+                        </div>
+
+                        <!-- Table of Contents -->
+                        <div class="table-of-contents mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">目錄</h3>
+                            <ul>
+                                <li><a href="#introduction">韓國料理簡介</a></li>
+                                <li><a href="#must-try">必嚐韓國料理</a></li>
+                                <li><a href="#street-food">韓國街頭小吃</a></li>
+                                <li><a href="#regional">地方特色美食</a></li>
+                                <li><a href="#dining-etiquette">韓國用餐禮儀</a></li>
+                                <li><a href="#food-markets">推薦美食市場</a></li>
+                                <li><a href="#restaurants">首爾必訪餐廳</a></li>
+                                <li><a href="#dietary">素食和特殊飲食需求</a></li>
+                                <li><a href="#tips">美食旅行小貼士</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Introduction -->
+                <section id="introduction" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">韓國料理簡介</h3>
+                            <p>韓國料理以其鮮明的風味、豐富的營養和精美的擺盤而聞名於世。韓食的核心理念是「藥食同源」，強調食物不僅是為了滿足口腹之慾，更是維持身體健康的重要元素。</p>
+                            
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <p>韓國料理的特點包括：</p>
+                                    <ul>
+                                        <li><strong>五味調和</strong>：韓國料理追求酸、甜、苦、辣、鹹五種基本味道的平衡。</li>
+                                        <li><strong>發酵食品</strong>：如泡菜（kimchi）和醬類，不僅增添風味，還有益健康。</li>
+                                        <li><strong>豐富的配菜</strong>：韓餐通常伴隨多種小菜（banchan），增加用餐的多樣性。</li>
+                                        <li><strong>烤肉文化</strong>：韓式烤肉是社交聚餐的重要形式，強調共享和互動。</li>
+                                        <li><strong>季節性</strong>：韓國料理高度重視季節性食材，菜單會隨季節變化。</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../images/korea/korean-banchan.jpg" alt="韓國小菜" class="img-fluid rounded w-100 h-100" style="object-fit: cover;">
+                                </div>
+                            </div>
+
+                            <p>韓國飲食文化深受其歷史和地理環境的影響。作為一個半島國家，海鮮在韓國料理中扮演重要角色。同時，由於冬季寒冷，韓國人發展出了多種保存食物的方法，特別是發酵技術，這也是為什麼泡菜和醬類在韓國飲食中如此重要的原因。</p>
+                            
+                            <p>近年來，隨著韓流文化的全球擴散，韓國料理也獲得了國際認可。無論是在高級餐廳還是街頭小攤，韓國美食都能提供獨特而難忘的味覺體驗。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Must-Try Korean Dishes -->
+                <section id="must-try" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">必嚐韓國料理</h3>
+                            <p class="mb-4">來到韓國，有些經典料理是絕對不能錯過的。以下是十大必嚐韓國美食，每一道都代表了韓國飲食文化的精髓。</p>
+
+                            <div class="row g-4">
+                                <!-- Bibimbap -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card dish-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/bibimbap.jpg" alt="韓式拌飯" class="dish-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">韓式拌飯 (비빔밥 Bibimbap)</h4>
+                                            <p class="text-muted small mb-2">價格範圍: ₩8,000-12,000</p>
+                                            <p class="mb-0">一碗米飯上鋪滿各種蔬菜、牛肉、雞蛋和辣椒醬，拌勻後食用。石鍋拌飯的米飯會變得香脆，增添口感層次。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">主食</span>
+                                                <span class="text-muted small">推薦指數: ★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Kimchi Jjigae -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card dish-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/kimchi-jjigae.jpg" alt="泡菜鍋" class="dish-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">泡菜鍋 (김치찌개 Kimchi-jjigae)</h4>
+                                            <p class="text-muted small mb-2">價格範圍: ₩7,000-10,000</p>
+                                            <p class="mb-0">以泡菜為主料的辣味湯鍋，通常加入豆腐、豬肉和蔥等食材。在寒冷的冬天，沒有什麼比一鍋熱騰騰的泡菜鍋更能暖胃暖心。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">湯品</span>
+                                                <span class="text-muted small">推薦指數: ★★★★☆</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Korean BBQ -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card dish-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/korean-bbq.jpg" alt="韓式烤肉" class="dish-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">韓式烤肉 (삼겹살 Samgyeopsal)</h4>
+                                            <p class="text-muted small mb-2">價格範圍: ₩12,000-20,000/人</p>
+                                            <p class="mb-0">韓國最受歡迎的社交美食，三層肉是最經典的選擇。烤熟的肉片包在生菜葉中，加入蒜片、辣椒和醬料一起食用，風味豐富。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">烤肉</span>
+                                                <span class="text-muted small">推薦指數: ★★★★★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tteokbokki -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card dish-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/tteokbokki.jpg" alt="辣炒年糕" class="dish-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">辣炒年糕 (떡볶이 Tteokbokki)</h4>
+                                            <p class="text-muted small mb-2">價格範圍: ₩3,000-5,000</p>
+                                            <p class="mb-0">韓國最受歡迎的街頭小吃之一，軟糯的年糕條在辣醬中翻炒，辣中帶甜，是韓國學生放學後的最愛。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">小吃</span>
+                                                <span class="text-muted small">推薦指數: ★★★★☆</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Sundubu Jjigae -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card dish-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/sundubu-jjigae.jpg" alt="嫩豆腐鍋" class="dish-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">嫩豆腐鍋 (순두부찌개 Sundubu-jjigae)</h4>
+                                            <p class="text-muted small mb-2">價格範圍: ₩7,000-10,000</p>
+                                            <p class="mb-0">以嫩豆腐為主料的辣味湯鍋，通常加入海鮮或肉類。湯底鮮美，豆腐滑嫩，是韓國人喜愛的家常料理。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">湯品</span>
+                                                <span class="text-muted small">推薦指數: ★★★★☆</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Japchae -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card dish-card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/japchae.jpg" alt="雜菜粉絲" class="dish-img">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">雜菜粉絲 (잡채 Japchae)</h4>
+                                            <p class="text-muted small mb-2">價格範圍: ₩8,000-12,000</p>
+                                            <p class="mb-0">韓國傳統節慶必備的料理，以地瓜粉絲為主料，加入各種蔬菜和牛肉炒製而成。口感Q彈，甜中帶鹹，風味獨特。</p>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <div class="d-flex justify-content-between">
+                                                <span class="badge bg-light text-dark">配菜</span>
+                                                <span class="text-muted small">推薦指數: ★★★★☆</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>小提示</strong>
+                                        <p class="mb-0">韓國料理普遍較辣，如果您不能吃辣，可以在點餐時說「안 맵게 해주세요」(an maepge haejuseyo)，意思是「請不要太辣」。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Street Food -->
+                <section id="street-food" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">韓國街頭小吃</h3>
+                            <p>韓國的街頭美食文化豐富多彩，從傳統市場到現代商圈，隨處可見各式各樣的小吃攤位。這些美味又實惠的小吃是體驗韓國本土飲食文化的絕佳方式。</p>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <img src="../images/korea/street-food-market.jpg" alt="韓國街頭小吃市場" class="img-fluid rounded w-100" style="height: 300px; object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <h4 class="fs-5 fw-bold mb-3">必嚐街頭小吃</h4>
+                                    <ul>
+                                        <li><strong>魚餅 (오뎅 Odeng)</strong> - 魚漿製成的餅，串在竹籤上，在熱湯中煮熟。冬天來一碗熱湯配魚餅，既暖胃又美味。</li>
+                                        <li><strong>糖餅 (호떡 Hotteok)</strong> - 外皮酥脆內餡香甜的韓式煎餅，餡料通常是紅糖、肉桂和堅果的混合物。</li>
+                                        <li><strong>雞蛋糕 (계란빵 Gyeran-ppang)</strong> - 外形像小麵包，中間嵌入一個完整的雞蛋，口感鬆軟。</li>
+                                        <li><strong>炸雞 (치킨 Chikin)</strong> - 韓式炸雞以其酥脆的外皮和多種醬料選擇而聞名，是韓國人最愛的宵夜之一。</li>
+                                        <li><strong>血腸 (순대 Sundae)</strong> - 韓式血腸，以豬血和糯米為主料，口感獨特。</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-5 fw-bold mb-3">推薦街頭小吃區</h4>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/myeongdong.jpg" alt="明洞" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">明洞 (Myeongdong)</h5>
+                                            <p class="card-text">首爾最著名的購物區，也是街頭美食的天堂。這裡有各種創新和傳統小吃，從炸雞到芝士龍蝦，應有盡有。</p>
+                                            <p class="text-muted small">營業時間: 下午4點至深夜</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/gwangjang-market.jpg" alt="廣藏市場" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">廣藏市場 (Gwangjang Market)</h5>
+                                            <p class="card-text">首爾最古老的市場之一，以其傳統美食而聞名。這裡的賓鐵糕、生拌牛肉和煎餅都是必嚐美食。</p>
+                                            <p class="text-muted small">營業時間: 上午9點至晚上10點</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/hongdae.jpg" alt="弘大" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">弘大 (Hongdae)</h5>
+                                            <p class="card-text">年輕人聚集的區域，街頭小吃種類豐富且創新。這裡有許多融合了西方元素的韓式小吃，如韓式炸雞和啤酒。</p>
+                                            <p class="text-muted small">營業時間: 下午2點至凌晨2點</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-lightbulb-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>旅行小貼士</strong>
+                                        <p class="mb-0">韓國街頭小吃通常價格實惠，一個人花費₩10,000-15,000就能品嚐多種小吃。建議結伴同行，這樣可以一次嚐試更多種類！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Regional Specialties -->
+                <section id="regional" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">地方特色美食</h3>
+                            <p>韓國各地區都有其獨特的飲食文化和特色料理。了解這些地方美食，可以讓您的韓國美食之旅更加豐富多彩。</p>
+
+                            <div class="row g-4">
+                                <!-- Busan -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/busan-food.jpg" alt="釜山美食" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">釜山 (Busan)</h4>
+                                                    <ul class="mb-0">
+                                                        <li><strong>豬肉湯飯 (돼지국밥 Dwaeji-gukbap)</strong> - 釜山最著名的料理，以豬骨熬製的濃湯配米飯。</li>
+                                                        <li><strong>生魚片 (회 Hoe)</strong> - 作為港口城市，釜山的海鮮新鮮美味，尤其是生魚片。</li>
+                                                        <li><strong>海鮮煎餅 (해물파전 Haemul-pajeon)</strong> - 加入豐富海鮮的韓式煎餅。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Jeonju -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/jeonju-food.jpg" alt="全州美食" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">全州 (Jeonju)</h4>
+                                                    <ul class="mb-0">
+                                                        <li><strong>全州拌飯 (전주비빔밥 Jeonju-bibimbap)</strong> - 全州是拌飯的發源地，這裡的拌飯使用更多種類的蔬菜和優質牛肉。</li>
+                                                        <li><strong>豆芽湯飯 (콩나물국밥 Kongnamul-gukbap)</strong> - 以豆芽為主料的清爽湯飯。</li>
+                                                        <li><strong>韓牛料理</strong> - 全州地區的韓牛品質極佳，各種烤肉和湯品都值得一試。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Gangwon -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/gangwon-food.jpg" alt="江原道美食" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">江原道 (Gangwon)</h4>
+                                                    <ul class="mb-0">
+                                                        <li><strong>馬鈴薯料理</strong> - 江原道以盛產馬鈴薯而聞名，這裡有各種創新的馬鈴薯料理。</li>
+                                                        <li><strong>山菜料理</strong> - 利用當地山區豐富的野生植物製作的各種料理。</li>
+                                                        <li><strong>松茸湯 (송이국 Songi-guk)</strong> - 以珍貴的松茸菇熬製的湯品，風味獨特。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Jeju -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/jeju-food.jpg" alt="濟州島美食" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">濟州島 (Jeju)</h4>
+                                                    <ul class="mb-0">
+                                                        <li><strong>黑豬肉 (흑돼지 Heuk-dwaeji)</strong> - 濟州島特有的黑豬肉，肉質鮮嫩多汁。</li>
+                                                        <li><strong>鮑魚粥 (전복죽 Jeonbok-juk)</strong> - 以新鮮鮑魚熬製的濃稠粥品。</li>
+                                                        <li><strong>海女採集的海鮮</strong> - 濟州島的海女文化聞名世界，她們採集的海鮮新鮮美味。</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <h4 class="fs-5 fw-bold mb-3">韓國美食地圖</h4>
+                                <div class="food-map">
+                                    <img src="../images/korea/korea-food-map.jpg" alt="韓國美食地圖" class="img-fluid rounded w-100 h-100" style="object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dining Etiquette -->
+                <section id="dining-etiquette" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">韓國用餐禮儀</h3>
+                            <p>了解韓國的用餐禮儀不僅能讓您的用餐體驗更加順暢，也是尊重當地文化的表現。以下是一些在韓國用餐時應該注意的禮儀。</p>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <h4 class="fs-5 fw-bold mb-3">基本禮儀</h4>
+                                    <ul>
+                                        <li><strong>長輩優先</strong> - 韓國社會非常重視年齡層級，年長者通常先入座並開始用餐。</li>
+                                        <li><strong>雙手接受</strong> - 接受食物或飲料時，應該用雙手，這是表示尊重的方式。</li>
+                                        <li><strong>不要插筷</strong> - 不要將筷子直立插在飯碗中，這在韓國被視為不吉利的象徵。</li>
+                                        <li><strong>共享文化</strong> - 韓國料理通常是共享的，一桌人會一起享用多道菜餚。</li>
+                                        <li><strong>飲酒禮儀</strong> - 接受長輩敬酒時，應該雙手接杯，並稍微轉頭飲用，表示尊重。</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../images/korea/korean-dining.jpg" alt="韓國用餐" class="img-fluid rounded w-100 h-100" style="object-fit: cover;">
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3">應該做的事</h4>
+                                            <ul class="mb-0">
+                                                <li>等年長者或主人開始用餐後再動筷</li>
+                                                <li>用餐時保持適度的交談</li>
+                                                <li>吃完後將筷子放回原位</li>
+                                                <li>分享食物時使用公筷</li>
+                                                <li>如果有人為您倒飲料，可以用手輕敲桌面表示感謝</li>
+                                                <li>用餐結束後，將餐具整齊放好</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3">不應該做的事</h4>
+                                            <ul class="mb-0">
+                                                <li>用餐時發出聲音（除了吃湯麵等特定食物）</li>
+                                                <li>在桌上放置手肘</li>
+                                                <li>用筷子指向他人</li>
+                                                <li>在公共場合大聲喧嘩</li>
+                                                <li>單手接受長輩遞來的食物或飲料</li>
+                                                <li>在用餐前拍照時間過長（讓食物變冷）</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>特別注意</strong>
+                                        <p class="mb-0">在韓國，尤其是傳統餐廳，可能需要脫鞋入座。如果看到餐廳入口處有鞋櫃或其他客人都脫鞋，請跟隨當地習俗。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Food Markets -->
+                <section id="food-markets" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">推薦美食市場</h3>
+                            <p>韓國的傳統市場是體驗地道美食和文化的絕佳場所。這些市場不僅提供新鮮的食材，還有各種即食美食和小吃。</p>
+
+                            <div class="row g-4">
+                                <!-- Gwangjang Market -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/gwangjang-market-food.jpg" alt="廣藏市場美食" class="card-img-top" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">廣藏市場 (Gwangjang Market)</h4>
+                                            <p class="text-muted small mb-2">地址: 서울 종로구 창경궁로 88</p>
+                                            <p>首爾最古老的市場之一，以其傳統美食而聞名。必嚐美食包括：</p>
+                                            <ul>
+                                                <li>生拌牛肉 (육회 Yukhoe)</li>
+                                                <li>賓鐵糕 (빈대떡 Bindaetteok)</li>
+                                                <li>血腸 (순대 Sundae)</li>
+                                                <li>韓式煎餅 (전 Jeon)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <p class="text-muted small mb-0">營業時間: 上午9點至晚上10點 (部分攤位可能有所不同)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Namdaemun Market -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/namdaemun-market.jpg" alt="南大門市場" class="card-img-top" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">南大門市場 (Namdaemun Market)</h4>
+                                            <p class="text-muted small mb-2">地址: 서울 중구 남대문시장4길 21</p>
+                                            <p>韓國最大的傳統市場，擁有600多年歷史。這裡的美食區提供各種韓國傳統料理，包括：</p>
+                                            <ul>
+                                                <li>刀切麵 (칼국수 Kalguksu)</li>
+                                                <li>海鮮煎餅 (해물파전 Haemul-pajeon)</li>
+                                                <li>餃子湯 (만두국 Manduguk)</li>
+                                                <li>各種小吃和甜點</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <p class="text-muted small mb-0">營業時間: 全天24小時 (部分攤位可能有所不同)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tongin Market -->
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/tongin-market.jpg" alt="通仁市場" class="card-img-top" style="height: 200px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold">通仁市場 (Tongin Market)</h4>
+                                            <p class="text-muted small mb-2">地址: 서울 종로구 자하문로 15길 18</p>
+                                            <p>這個市場以其獨特的「便當計劃」而聞名，遊客可以購買代幣，然後用代幣在不同攤位換取小份食物，自己組合成一個便當。推薦美食：</p>
+                                            <ul>
+                                                <li>紫菜包飯 (김밥 Gimbap)</li>
+                                                <li>炸雞 (치킨 Chikin)</li>
+                                                <li>辣炒年糕 (떡볶이 Tteokbokki)</li>
+                                                <li>煎餅 (부침개 Buchimgae)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="card-footer bg-white border-0">
+                                            <p class="text-muted small mb-0">營業時間: 上午9點至下午6點 (週日休市)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-info mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-lightbulb-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>市場探索小貼士</strong>
+                                        <p class="mb-0">韓國傳統市場通常人潮擁擠，建議在非用餐高峰時段前往。另外，看到排隊人多的攤位，通常代表那裡的食物特別受歡迎，值得一試！</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Restaurants -->
+                <section id="restaurants" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">首爾必訪餐廳</h3>
+                            <p>除了街頭小吃和傳統市場，韓國還有許多值得一訪的餐廳，從米其林星級餐廳到當地人最愛的隱藏美食。以下是首爾幾家不容錯過的餐廳。</p>
+
+                            <div class="row g-4">
+                                <!-- Restaurant 1 -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/restaurant-tosokchon.jpg" alt="土俗村參雞湯" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">土俗村參雞湯 (Tosokchon)</h4>
+                                                    <p class="text-muted small">地址: 서울 종로구 자하문로5길 5</p>
+                                                    <p>首爾最著名的人蔘雞湯餐廳，位於景福宮附近。這家開業超過30年的餐廳以其正宗的人蔘雞湯而聞名，湯中的雞肉鮮嫩多汁，人蔘香氣濃郁。</p>
+                                                    <p class="text-muted small mb-0">價格範圍: ₩16,000-20,000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Restaurant 2 -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/restaurant-myeongdong-kyoja.jpg" alt="明洞教子" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">明洞教子 (Myeongdong Kyoja)</h4>
+                                                    <p class="text-muted small">地址: 서울 중구 명동10길 29</p>
+                                                    <p>創立於1966年的老字號麵館，以手工刀切麵和餃子聞名。麵條Q彈有嚼勁，湯頭清爽鮮美，是品嚐韓式麵食的絕佳選擇。</p>
+                                                    <p class="text-muted small mb-0">價格範圍: ₩8,000-12,000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Restaurant 3 -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/restaurant-gogung.jpg" alt="高宮" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">高宮 (Gogung)</h4>
+                                                    <p class="text-muted small">地址: 서울 중구 명동길 45</p>
+                                                    <p>專門提供全州拌飯的餐廳，使用新鮮的時令蔬菜和優質食材。這裡的拌飯色彩豐富，營養均衡，是體驗韓國國民美食的理想場所。</p>
+                                                    <p class="text-muted small mb-0">價格範圍: ₩12,000-18,000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Restaurant 4 -->
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="row g-0">
+                                            <div class="col-4">
+                                                <img src="../images/korea/restaurant-wangbijib.jpg" alt="王妃家" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="card-body">
+                                                    <h4 class="fs-5 fw-bold">王妃家 (Wangbijib)</h4>
+                                                    <p class="text-muted small">地址: 서울 중구 명동8길 8</p>
+                                                    <p>明洞地區最受歡迎的韓式烤肉餐廳之一，以高品質的牛肉和專業的服務而聞名。肉質鮮嫩多汁，醬料搭配恰到好處。</p>
+                                                    <p class="text-muted small mb-0">價格範圍: ₩20,000-30,000/人</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <h4 class="fs-5 fw-bold mb-3">預訂與用餐小貼士</h4>
+                                <ul>
+                                    <li>韓國熱門餐廳通常需要排隊，建議避開用餐高峰時段或提前預約。</li>
+                                    <li>許多韓國餐廳不接受信用卡，建議隨身攜帶足夠的現金。</li>
+                                    <li>部分高級餐廳可能需要提前數週預約，尤其是米其林星級餐廳。</li>
+                                    <li>在韓國，通常不需要支付小費，但部分高級餐廳可能會收取服務費。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Dietary Restrictions -->
+                <section id="dietary" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">素食和特殊飲食需求</h3>
+                            <p>對於素食者或有特殊飲食需求的旅客來說，在韓國用餐可能會有一些挑戰，但隨著國際遊客的增加，越來越多的餐廳開始提供素食和其他特殊飲食選項。</p>
+
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-6">
+                                    <h4 class="fs-5 fw-bold mb-3">素食者指南</h4>
+                                    <p>在韓國，傳統料理中常常使用肉類或海鮮作為調味料，即使是看起來像素食的菜餚也可能含有肉類成分。以下是一些素食者在韓國用餐的建議：</p>
+                                    <ul>
+                                        <li>事先學習一些基本的韓語素食相關詞彙，如「我是素食者」(저는 채식주의자입니다 - jeo-neun chaesik-juuija-imnida)。</li>
+                                        <li>使用Happy Cow等應用程序尋找素食友好的餐廳。</li>
+                                        <li>考慮訪問佛教寺廟餐廳，它們通常提供純素食餐點。</li>
+                                        <li>在點餐時明確說明不要肉類、海鮮和魚露等調味料。</li>
+                                        <li>自助餐廳和沙拉吧是較安全的選擇，因為您可以看到食物的成分。</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <img src="../images/korea/temple-food.jpg" alt="韓國寺廟料理" class="img-fluid rounded w-100 h-100" style="object-fit: cover;">
+                                </div>
+                            </div>
+
+                            <h4 class="fs-5 fw-bold mb-3">推薦素食餐廳</h4>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/restaurant-sanchon.jpg" alt="山村" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">山村 (Sanchon)</h5>
+                                            <p class="text-muted small">地址: 서울 종로구 인사동길 30-13</p>
+                                            <p class="card-text">由前佛教僧侶創立的餐廳，提供正宗的韓國寺廟料理。這裡的菜餚完全素食，使用當季食材製作，風味獨特。</p>
+                                            <p class="text-muted small mb-0">價格範圍: ₩20,000-30,000/人</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/restaurant-plant.jpg" alt="Plant" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">Plant (플랜트)</h5>
+                                            <p class="text-muted small">地址: 서울 용산구 이태원로 56길 16</p>
+                                            <p class="card-text">位於梨泰院的現代素食餐廳，提供創意素食料理，包括素食漢堡、沙拉和甜點。環境舒適，是素食者的理想選擇。</p>
+                                            <p class="text-muted small mb-0">價格範圍: ₩12,000-18,000/人</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <img src="../images/korea/restaurant-balwoo.jpg" alt="발우공양" class="card-img-top" style="height: 180px; object-fit: cover;">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">發佛供養 (Balwoo Gongyang)</h5>
+                                            <p class="text-muted small">地址: 서울 종로구 우정국로 56</p>
+                                            <p class="card-text">米其林一星素食餐廳，提供精緻的韓國佛教寺廟料理。菜餚精美講究，展現韓國素食文化的精髓。</p>
+                                            <p class="text-muted small mb-0">價格範圍: ₩30,000-50,000/人</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-5 fw-bold mb-3">其他特殊飲食需求</h4>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">無麩質飲食</h5>
+                                            <p>韓國料理中的主食通常是米飯，而非小麥製品，這對無麩質飲食者是個好消息。但仍需注意以下幾點：</p>
+                                            <ul class="mb-0">
+                                                <li>醬油和其他醬料可能含有小麥</li>
+                                                <li>避免點選麵類料理和煎餅</li>
+                                                <li>韓式炸雞的麵糊通常含有小麥粉</li>
+                                                <li>在高級餐廳用餐時，可以提前告知無麩質需求</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">清真飲食</h5>
+                                            <p>在韓國尋找清真認證的餐廳可能有些挑戰，但隨著穆斯林遊客的增加，情況正在改善：</p>
+                                            <ul class="mb-0">
+                                                <li>首爾梨泰院地區有多家清真認證餐廳</li>
+                                                <li>韓國旅遊組織提供清真餐廳指南和應用程序</li>
+                                                <li>部分國際連鎖餐廳提供清真選項</li>
+                                                <li>海鮮和素食料理是較安全的選擇</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-success mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-translate me-2 fs-5"></i>
+                                    <div>
+                                        <strong>實用韓語短句</strong>
+                                        <p class="mb-0">
+                                            「我是素食者」- 저는 채식주의자입니다 (jeo-neun chaesik-juuija-imnida)<br>
+                                            「不要肉類」- 고기 빼주세요 (gogi ppae-juseyo)<br>
+                                            「不要海鮮」- 해산물 빼주세요 (haesanmul ppae-juseyo)<br>
+                                            「我有食物過敏」- 저는 음식 알레르기가 있습니다 (jeo-neun eumsik allereugi-ga issseubnida)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Travel Tips -->
+                <section id="tips" class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">美食旅行小貼士</h3>
+                            <p>以下是一些實用的建議，幫助您在韓國獲得最佳的美食體驗：</p>
+
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-currency-exchange me-2 text-rose"></i>預算規劃</h4>
+                                            <ul class="mb-0">
+                                                <li><strong>街頭小吃</strong>: ₩3,000-7,000/項</li>
+                                                <li><strong>普通餐廳</strong>: ₩8,000-15,000/人</li>
+                                                <li><strong>韓式烤肉</strong>: ₩15,000-30,000/人</li>
+                                                <li><strong>高級餐廳</strong>: ₩30,000-50,000/人</li>
+                                                <li><strong>飲料</strong>: 燒酒 ₩4,000-6,000/瓶，啤酒 ₩4,000-7,000/瓶</li>
+                                                <li>建議每天預算約 ₩30,000-40,000 用於餐飲</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-clock-history me-2 text-rose"></i>用餐時間</h4>
+                                            <ul class="mb-0">
+                                                <li><strong>早餐</strong>: 上午7點至9點</li>
+                                                <li><strong>午餐</strong>: 中午12點至下午2點</li>
+                                                <li><strong>晚餐</strong>: 晚上6點至8點</li>
+                                                <li>韓國人通常晚餐後還會有第二攤（치맥 chimaek，炸雞配啤酒）或第三攤</li>
+                                                <li>許多餐廳全天營業，但傳統市場的小吃攤通常下午較熱鬧</li>
+                                                <li>避開用餐高峰時段可以減少排隊時間</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-phone me-2 text-rose"></i>實用應用程序</h4>
+                                            <ul class="mb-0">
+                                                <li><strong>MangoPlate</strong>: 韓國版的Yelp，提供餐廳評價和推薦</li>
+                                                <li><strong>Naver Map</strong>: 比Google Maps更詳細的韓國地圖，包含餐廳資訊</li>
+                                                <li><strong>Shuttle</strong>: 提供英文菜單翻譯和點餐幫助</li>
+                                                <li><strong>Papago</strong>: 由Naver開發的翻譯應用，韓英翻譯準確度高</li>
+                                                <li><strong>Yogiyo/Baemin</strong>: 韓國最受歡迎的外送應用，可以在住宿處享用美食</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-body">
+                                            <h4 class="fs-5 fw-bold mb-3"><i class="bi bi-lightbulb me-2 text-rose"></i>其他實用建議</h4>
+                                            <ul class="mb-0">
+                                                <li>韓國餐廳通常提供免費的白開水和小菜（반찬 banchan）</li>
+                                                <li>許多韓國料理份量大，適合分享</li>
+                                                <li>在韓國，通常不需要支付小費</li>
+                                                <li>攜帶濕紙巾，因為部分小吃攤可能沒有洗手設施</li>
+                                                <li>學習基本的韓語用餐詞彙，如「好吃」(맛있어요 masiss-eoyo)</li>
+                                                <li>參加美食之旅可以在當地導遊的帶領下探索隱藏美食</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning mt-4">
+                                <div class="d-flex">
+                                    <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>注意事項</strong>
+                                        <p class="mb-0">韓國料理普遍較辣，如果您不能吃辣，請在點餐時明確說明。另外，部分韓國餐廳可能只接受現金，建議隨身攜帶足夠的現金。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion -->
+                <section class="mb-5">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="fs-4 fw-bold mb-4 food-category">結語</h3>
+                            <p>韓國美食以其獨特的風味、豐富的營養和精美的擺盤征服了全球美食愛好者的心。從辣炒年糕到韓式烤肉，從傳統市場到米其林星級餐廳，韓國提供了多樣化的美食體驗，滿足各種口味和預算。</p>
+                            <p>在韓國的美食之旅中，不妨放下熟悉的舒適圈，嘗試一些新的口味和食材。與當地人交流，了解他們的飲食習慣和推薦，往往能發現意想不到的美食寶藏。</p>
+                            <p>最後，記住韓國人常說的一句話：「食物就是藥」。韓國料理不僅美味，還注重營養平衡和健康，讓您在享受美食的同時，也滋養身體和心靈。</p>
+                            <p class="mb-0">祝您在韓國有一段美味難忘的旅程！</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Author Info -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3" style="width: 60px; height: 60px;">
+                                <img src="../images/avatars/foodie.jpg" alt="美食探險家" class="img-fluid rounded-circle">
+                            </div>
+                            <div>
+                                <h4 class="fs-5 fw-bold mb-1">美食探險家</h4>
+                                <p class="text-muted small mb-2">專業美食作家 | 旅遊達人</p>
+                                <p class="mb-0 small">熱愛探索世界各地的美食文化，已走訪超過30個國家。相信美食是了解一個國家最直接的方式。</p>
+                            </div>
+                            <button class="btn btn-rose ms-auto">追蹤作者</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Related Articles -->
+                <h3 class="fs-4 fw-bold mb-4">相關文章</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow">
+                            <img src="../images/korea/busan-winter-trip.jpg" alt="釜山冬季之旅" class="card-img-top" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h4 class="fs-5 fw-bold">釜山冬季之旅：海濱城市的浪漫與美食</h4>
+                                <p class="text-muted small">2024年2月10日</p>
+                                <p class="card-text">探索韓國第二大城市釜山的冬季魅力，從海雲台的溫泉到札嘎其市場的海鮮...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="busan-winter-trip.html" class="btn btn-outline-rose btn-sm">閱讀更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow">
+                            <img src="../images/korea/korea-travel-tips.jpg" alt="韓國旅遊小貼士" class="card-img-top" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h4 class="fs-5 fw-bold">韓國旅遊必知：從交通到購物的實用指南</h4>
+                                <p class="text-muted small">2024年1月15日</p>
+                                <p class="card-text">計劃韓國之旅？這篇文章涵蓋了你需要知道的一切，從交通工具到購物攻略...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="korea-travel-tips.html" class="btn btn-outline-rose btn-sm">閱讀更多</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow">
+                            <img src="../images/korea/seoul-cafe-hopping.jpg" alt="首爾咖啡廳巡禮" class="card-img-top" style="height: 180px; object-fit: cover;">
+                            <div class="card-body">
+                                <h4 class="fs-5 fw-bold">首爾咖啡廳巡禮：品味韓式咖啡文化</h4>
+                                <p class="text-muted small">2023年12月5日</p>
+                                <p class="card-text">首爾的咖啡文化蓬勃發展，從傳統韓屋改建的咖啡廳到超現代的設計空間...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <a href="#" class="btn btn-outline-rose btn-sm">閱讀更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <h3 class="fs-4 fw-bold mb-4">留言討論</h3>
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <form>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="3" placeholder="分享您的想法或提問..."></textarea>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-rose">發表留言</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body p-4">
+                        <div class="d-flex mb-3">
+                            <div class="avatar me-3">
+                                <img src="../images/avatars/user1.jpg" alt="用戶頭像">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 fw-bold">旅行達人</h5>
+                                    <span class="text-muted ms-2 small">3天前</span>
+                                </div>
+                                <p class="mb-0">感謝分享這麼詳細的韓國美食指南！我下個月要去首爾，已經把廣藏市場和明洞的小吃街加入行程了。請問有沒有推薦的韓式炸雞店？聽說韓國的炸雞配啤酒超級讚！</p>
+                            </div>
+                        </div>
+                        <div class="d-flex ms-5 mb-2">
+                            <div class="avatar me-3">
+                                <img src="../images/avatars/foodie.jpg" alt="美食探險家">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 fw-bold">美食探險家</h5>
+                                    <span class="text-muted ms-2 small">2天前</span>
+                                    <span class="badge bg-rose ms-2">作者</span>
+                                </div>
+                                <p class="mb-0">謝謝你的留言！關於韓式炸雞，我強烈推薦「橋村炸雞」(Kyochon)和「BHC炸雞」，兩家都有多家分店。如果想要更地道的體驗，可以去弘大附近的「Chimac」小店，那裡的炸雞和啤酒組合非常受當地年輕人歡迎。祝你旅途愉快！</p>
+                            </div>
+                        </div>
+                        <div class="ms-5">
+                            <button class="btn btn-sm btn-light">回覆</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow-sm mb-3">
+                    <div class="card-body p-4">
+                        <div class="d-flex">
+                            <div class="avatar me-3">
+                                <img src="../images/avatars/user2.jpg" alt="用戶頭像">
+                            </div>
+                            <div>
+                                <div class="d-flex align-items-center">
+                                    <h5 class="mb-0 fw-bold">美食愛好者</h5>
+                                    <span class="text-muted ms-2 small">1週前</span>
+                                </div>
+                                <p class="mb-0">我是素食者，上個月去了韓國，確實如文中所說找素食餐廳有點挑戰。不過我去了文中提到的「山村」，真的非常棒！另外想補充一點，在首爾站附近的「Loving Hut」也是不錯的素食選擇，提供韓式和國際化的素食料理。</p>
+                            </div>
+                        </div>
+                        <div class="mt-2 ms-5">
+                            <button class="btn btn-sm btn-light">回覆</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center mb-5">
+                    <button class="btn btn-outline-secondary">查看更多留言</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    
+    <script>
+        // 添加滾動到目錄項目的平滑效果
+        document.querySelectorAll('.table-of-contents a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
