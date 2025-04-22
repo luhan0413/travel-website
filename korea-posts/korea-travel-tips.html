@@ -56,8 +56,8 @@
                         <!-- Article Content -->
                         <div class="col-lg-8">
                             <div class="d-flex align-items-center mb-4">
-                                <a href="../korea.html" class="me-2 text-decoration-none text-dark">
-                                    <i class="fas fa-arrow-left"></i>
+                                <a href="../korea.html" class="me-2 text-dark">
+                                    <i class="bi bi-arrow-left"></i>
                                 </a>
                                 <h1 class="fs-3 fw-bold m-0">韓國旅遊注意事項與實用資訊</h1>
                             </div>
@@ -65,7 +65,7 @@
                             <!-- Author Info -->
                             <div class="d-flex align-items-center gap-3 mb-4">
                                 <div class="avatar">
-                                    <img src="https://via.placeholder.com/40" alt="韓國通" class="rounded-circle">
+                                    <img src="https://ws.mofa.gov.tw/001/Upload/OldFile/Sites/FlagUrlLink/b3d441f3-f229-427d-93f0-69e1c6729918.gif" alt="韓國通" class="rounded-circle">
                                 </div>
                                 <div>
                                     <div class="fw-semibold">韓國通</div>
@@ -95,7 +95,7 @@
 
                             <!-- Cover Image -->
                             <div class="mb-4 position-relative rounded overflow-hidden" style="height: 400px;">
-                                <img src="https://via.placeholder.com/1200x600" alt="韓國旅遊" class="img-fluid w-100 h-100 object-fit-cover">
+                                <img src="https://blog-static.kkday.com/zh-hk/blog/wp-content/uploads/Korea_Seoul_Gyeongbok-Palace_Ashutterstock_722401156-scaled.webp" alt="韓國旅遊" class="img-fluid w-100 h-100 object-fit-cover">
                             </div>
 
                             <!-- Introduction -->
@@ -409,11 +409,140 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <!-- Custom JavaScript -->
-    <script src="../js/main.js"></script>
+       <!-- Custom JavaScript -->
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Day navigation functionality
+            const dayNavItems = document.querySelectorAll('.day-nav-item');
+            
+            dayNavItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    dayNavItems.forEach(navItem => {
+                        navItem.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Scroll to the corresponding day section
+                    const day = this.getAttribute('data-day');
+                    const daySection = document.getElementById(`day${day}`);
+                    
+                    if (daySection) {
+                        daySection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Sidebar TOC functionality
+            const tocItems = document.querySelectorAll('.toc-item');
+            
+            tocItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    tocItems.forEach(tocItem => {
+                        tocItem.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    // Scroll to the corresponding day section
+                    const section = this.getAttribute('data-section');
+                    const daySection = document.getElementById(`day${section}`);
+                    
+                    if (daySection) {
+                        daySection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+            
+            // Like, bookmark, and share functionality
+            const actionButtons = document.querySelectorAll('.action-btn');
+            
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const action = this.getAttribute('data-action');
+                    
+                    if (action === 'like' || action === 'bookmark') {
+                        this.classList.toggle('active');
+                        if (this.classList.contains('active')) {
+                            this.classList.remove('btn-outline-secondary');
+                            this.classList.add('btn-rose');
+                            
+                            if (action === 'like') {
+                                this.innerHTML = '<i class="bi bi-heart-fill"></i>';
+                            } else if (action === 'bookmark') {
+                                this.innerHTML = '<i class="bi bi-bookmark-fill"></i>';
+                            }
+                        } else {
+                            this.classList.remove('btn-rose');
+                            this.classList.add('btn-outline-secondary');
+                            
+                            if (action === 'like') {
+                                this.innerHTML = '<i class="bi bi-heart"></i>';
+                            } else if (action === 'bookmark') {
+                                this.innerHTML = '<i class="bi bi-bookmark"></i>';
+                            }
+                        }
+                    } else if (action === 'share') {
+                        // Create a temporary input to copy the URL
+                        const tempInput = document.createElement('input');
+                        tempInput.value = window.location.href;
+                        document.body.appendChild(tempInput);
+                        tempInput.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tempInput);
+                        
+                        // Show a toast or alert
+                        alert('連結��複製到剪貼簿！');
+                    }
+                });
+            });
+            
+            // Comment like functionality
+            const commentLikeButtons = document.querySelectorAll('.comment button[data-likes]');
+            
+            commentLikeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    this.classList.toggle('text-rose');
+                    const likeCount = this.querySelector('.like-count');
+                    const currentLikes = parseInt(likeCount.textContent);
+                    
+                    if (this.classList.contains('text-rose')) {
+                        likeCount.textContent = currentLikes + 1;
+                        this.querySelector('i').classList.remove('bi-heart');
+                        this.querySelector('i').classList.add('bi-heart-fill');
+                    } else {
+                        likeCount.textContent = currentLikes - 1;
+                        this.querySelector('i').classList.remove('bi-heart-fill');
+                        this.querySelector('i').classList.add('bi-heart');
+                    }
+                });
+            });
+        });
+        </script>
+        <!-- Bootstrap JS Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+        <!-- Custom JavaScript -->
+        <script src="../js/main.js"></script>
+        
+        <script>
+            // 添加滾動到目錄項目的平滑效果
+            document.querySelectorAll('.table-of-contents a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            </script>
 </body>
 </html>
