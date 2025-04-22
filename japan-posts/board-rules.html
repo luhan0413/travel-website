@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本旅遊板 板規</title>
+    <meta name="description" content="日本旅遊板 板規">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="border-bottom sticky-top bg-white">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="../index.html" class="text-decoration-none">
+                    <h1 class="fs-4 fw-bold text-rose m-0">Tcarval</h1>
+                </a>
+                <div class="d-none d-md-flex gap-4">
+                    <a href="../japan.html" class="text-decoration-none text-rose fw-semibold">日本</a>
+                    <a href="../korea.html" class="text-decoration-none text-dark">韓國</a>
+                    <a href="../thailand.html" class="text-decoration-none text-dark">泰國</a>
+                    <a href="../eastern-europe.html" class="text-decoration-none text-dark">東歐美景</a>
+                    <a href="../usa.html" class="text-decoration-none text-dark">美國</a>
+                </div>
+                <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                    <i class="bi bi-list fs-4"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="offcanvas offcanvas-end d-md-none" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold text-rose">Tcarval</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column gap-3">
+                <a href="../japan.html" class="text-decoration-none text-rose fw-semibold p-2">日本</a>
+                <a href="../korea.html" class="text-decoration-none text-dark p-2">韓國</a>
+                <a href="../thailand.html" class="text-decoration-none text-dark p-2">泰國</a>
+                <a href="../eastern-europe.html" class="text-decoration-none text-dark p-2">東歐美景</a>
+                <a href="../usa.html" class="text-decoration-none text-dark p-2">美國</a>
+                <hr>
+                <a href="../more.html" class="text-decoration-none text-muted p-2">更多</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <aside class="sidebar border-end d-none d-md-block" style="width: 240px; height: calc(100vh - 65px); position: sticky; top: 65px;">
+            <nav class="p-3">
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="../japan.html" class="d-block p-2 rounded text-decoration-none active">1. 日本</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../korea.html" class="d-block p-2 rounded text-decoration-none">2. 韓國</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../thailand.html" class="d-block p-2 rounded text-decoration-none">3. 泰國</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../eastern-europe.html" class="d-block p-2 rounded text-decoration-none">4. 東歐美景</a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="../usa.html" class="d-block p-2 rounded text-decoration-none">5. 美國</a>
+                    </li>
+                </ul>
+                <hr>
+                <a href="../more.html" class="d-block p-2 text-decoration-none text-muted">更多</a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow-1 p-4">
+            <div class="container">
+                <div class="d-flex align-items-center mb-4">
+                    <a href="../japan.html" class="me-2 text-dark">
+                        <i class="bi bi-arrow-left"></i>
+                    </a>
+                    <h1 class="fs-3 fw-bold mb-0">日本旅遊板 板規</h1>
+                </div>
+
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-rose rounded-circle p-3 me-3">
+                                <i class="bi bi-shield-check text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h2 class="fs-4 fw-bold mb-1">歡迎來到日本旅遊版</h2>
+                                <p class="text-muted mb-0">最後更新：2024年3月15日</p>
+                            </div>
+                        </div>
+
+                        <p class="lead mb-4">為了維持一個友善、有幫助且尊重的社區環境，我們制定了以下規則與指南。所有會員在參與討論、發表文章或評論時，都必須遵守這些規則。</p>
+
+                        <div class="alert alert-info mb-4">
+                            <div class="d-flex">
+                                <i class="bi bi-info-circle-fill me-2 fs-5"></i>
+                                <div>
+                                    <strong>重要提醒</strong>
+                                    <p class="mb-0">參與此版即表示您同意遵守以下規則。管理員保留刪除違規內容、暫停或終止違規會員帳號的權利。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- General Rules -->
+                        <section class="mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">一、基本規則</h3>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <ol class="mb-0">
+                                        <li class="mb-2">尊重所有成員，不得使用侮辱性語言或人身攻擊。</li>
+                                        <li class="mb-2">禁止發布垃圾訊息、重複內容或無關主題的內容。</li>
+                                        <li class="mb-2">禁止發布色情、暴力、歧視或其他不適當的內容。</li>
+                                        <li class="mb-2">尊重他人的隱私，未經許可不得分享他人的個人資訊。</li>
+                                        <li class="mb-2">禁止發布侵犯版權的內容，包括未經授權的照片、文章或其他媒體。</li>
+                                        <li class="mb-2">禁止進行任何形式的商業宣傳或廣告，除非得到管理員的明確許可。</li>
+                                        <li class="mb-2">禁止發布虛假或誤導性的資訊，特別是關於旅遊安全、簽證要求或健康建議等重要事項。</li>
+                                        <li class="mb-2">遵守各國法律法規，不得發布鼓勵或教唆違法行為的內容。</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Posting Guidelines -->
+                        <section class="mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">二、發文指南</h3>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-header bg-success text-white">
+                                            <h4 class="fs-6 fw-bold mb-0">
+                                                <i class="bi bi-check-circle me-2"></i>推薦做法
+                                            </h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li class="mb-2">使用清晰、描述性的標題，讓其他會員了解您的文章內容。</li>
+                                                <li class="mb-2">在適當的分類下發布內容，例如將東京旅遊問題發布在日本版區。</li>
+                                                <li class="mb-2">分享真實的旅遊經驗和照片，並註明拍攝時間和地點。</li>
+                                                <li class="mb-2">提供詳細且有幫助的資訊，例如交通方式、價格、營業時間等。</li>
+                                                <li class="mb-2">尊重不同意見，以建設性的方式參與討論。</li>
+                                                <li class="mb-2">使用適當的標籤（Tags）讓您的內容更容易被搜尋到。</li>
+                                                <li class="mb-2">在分享旅遊建議前，確保資訊是最新且準確的。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100 border-0 shadow-sm">
+                                        <div class="card-header bg-danger text-white">
+                                            <h4 class="fs-6 fw-bold mb-0">
+                                                <i class="bi bi-x-circle me-2"></i>禁止行為
+                                            </h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li class="mb-2">使用全大寫字母或過多標點符號的標題（例如：「日本超讚！！！！！」）。</li>
+                                                <li class="mb-2">在多個版區重複發布相同內容。</li>
+                                                <li class="mb-2">發布未經證實的謠言或誤導性資訊。</li>
+                                                <li class="mb-2">發布低質量的內容，如只有幾個字的問題或評論。</li>
+                                                <li class="mb-2">使用挑釁性或攻擊性的語言回應他人。</li>
+                                                <li class="mb-2">發布與旅遊無關的政治、宗教或爭議性話題。</li>
+                                                <li class="mb-2">未經許可分享他人的照片或個人經歷。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Content Rules -->
+                        <section class="mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">三、內容規範</h3>
+                            
+                            <h4 class="fs-6 fw-semibold mb-2">3.1 旅遊報告與遊記</h4>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <ul class="mb-0">
+                                        <li class="mb-2">分享真實的旅遊經驗，包括行程、交通、住宿、美食等資訊。</li>
+                                        <li class="mb-2">提供有用的細節，如價格、營業時間、交通方式等。</li>
+                                        <li class="mb-2">如果分享照片，請確保照片是您自己拍攝的，或您有權分享的。</li>
+                                        <li class="mb-2">避免過度美化或誇大旅遊體驗，保持客觀和真實。</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-6 fw-semibold mb-2">3.2 問題與討論</h4>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <ul class="mb-0">
+                                        <li class="mb-2">在發問前，請先使用搜尋功能查看是否已有類似問題被回答。</li>
+                                        <li class="mb-2">提供足夠的背景資訊，讓其他會員能夠提供有針對性的建議。</li>
+                                        <li class="mb-2">一個主題一個問題，避免在同一主題中詢問多個不相關的問題。</li>
+                                        <li class="mb-2">對於有幫助的回答，請表示感謝並標記為「最佳解答」（如適用）。</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-6 fw-semibold mb-2">3.3 評論與回覆</h4>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <ul class="mb-0">
+                                        <li class="mb-2">保持禮貌和尊重，即使您不同意他人的觀點。</li>
+                                        <li class="mb-2">提供建設性的意見和有用的資訊，避免無意義的評論。</li>
+                                        <li class="mb-2">如果您要糾正他人的資訊，請提供可靠的來源或個人經驗作為依據。</li>
+                                        <li class="mb-2">避免使用諷刺、嘲諷或貶低的語氣。</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h4 class="fs-6 fw-semibold mb-2">3.4 照片與媒體</h4>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <ul class="mb-0">
+                                        <li class="mb-2">只分享您自己拍攝的照片，或您有權分享的照片。</li>
+                                        <li class="mb-2">如使用他人的照片，必須註明來源並確保您有權使用。</li>
+                                        <li class="mb-2">避免分享含有可識別他人面孔的照片，除非您已獲得許可。</li>
+                                        <li class="mb-2">不得分享不適當或冒犯性的照片或媒體。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Japan-Specific Rules -->
+                        <section class="mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">四、日本旅遊特別規範</h3>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <p>由於本版區專注於日本旅遊，請特別注意以下規範：</p>
+                                    <ul class="mb-0">
+                                        <li class="mb-2">尊重日本文化和習俗，避免發布可能被視為不尊重的內容。</li>
+                                        <li class="mb-2">分享日本旅遊資訊時，請盡量提供準確的日文名稱和羅馬拼音，以便其他旅客查找。</li>
+                                        <li class="mb-2">討論敏感歷史話題時，請保持客觀和尊重，避免引發爭議。</li>
+                                        <li class="mb-2">分享溫泉、旅館等體驗時，請尊重當地規定和禮儀，並在分享照片時特別注意隱私。</li>
+                                        <li class="mb-2">討論日本特定地區（如福島等）的安全問題時，請提供官方和可靠的資訊來源。</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Moderation -->
+                        <section class="mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">五、管理與處罰</h3>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <p>違反社區規則可能導致以下後果，具體取決於違規的嚴重程度和頻率：</p>
+                                    <ol class="mb-0">
+                                        <li class="mb-2"><strong>警告</strong>：對於輕微或首次違規，管理員會發出警告。</li>
+                                        <li class="mb-2"><strong>內容刪除</strong>：違規內容將被刪除，不會另行通知。</li>
+                                        <li class="mb-2"><strong>暫時禁言</strong>：嚴重或重複違規可能導致暫時禁止發言，期限從1天到30天不等。</li>
+                                        <li class="mb-2"><strong>永久禁止</strong>：持續違規或極其嚴重的違規行為可能導致永久禁止訪問社區。</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="alert alert-warning mb-3">
+                                <div class="d-flex">
+                                    <i class="bi bi-exclamation-triangle-fill me-2 fs-5"></i>
+                                    <div>
+                                        <strong>注意</strong>
+                                        <p class="mb-0">管理員的決定為最終決定。然而，如果您認為有誤判，可以通過下方的聯絡方式提出申訴。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Reporting -->
+                        <section class="mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">六、舉報違規內容</h3>
+                            <div class="card bg-light border-0 mb-3">
+                                <div class="card-body">
+                                    <p>如果您發現違反社區規則的內容，請通過以下方式舉報：</p>
+                                    <ol class="mb-0">
+                                        <li class="mb-2">使用內容旁的「舉報」按鈕。</li>
+                                        <li class="mb-2">在舉報表單中選擇適當的違規類型。</li>
+                                        <li class="mb-2">提供簡短說明，說明為何您認為該內容違規。</li>
+                                        <li class="mb-2">管理團隊將審核您的舉報並採取適當行動。</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Contact -->
+                        <section class="mb-4">
+                            <h3 class="fs-5 fw-bold mb-3">七、聯絡管理團隊</h3>
+                            <div class="card bg-light border-0">
+                                <div class="card-body">
+                                    <p>如有任何問題、建議或申訴，請通過以下方式聯絡我們：</p>
+                                    <ul class="mb-0">
+                                        <li class="mb-2">電子郵件：<a href="mailto:community@tcarval.com">community@tcarval.com</a></li>
+                                        <li class="mb-2">私訊：向任何帶有「管理員」或「版主」標籤的會員發送私訊</li>
+                                        <li class="mb-2">聯絡表單：使用網站底部的「聯絡我們」表單</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="alert alert-success mb-0">
+                            <div class="d-flex">
+                                <i class="bi bi-heart-fill me-2 fs-5"></i>
+                                <div>
+                                    <strong>感謝您的配合</strong>
+                                    <p class="mb-0">遵守這些規則有助於維持一個友善、有幫助且尊重的社區環境，讓所有旅遊愛好者都能分享經驗和獲取有用的資訊。我們期待您的積極參與！</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <section class="mb-5">
+                    <h2 class="fs-4 fw-bold mb-4">常見問題</h2>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    我可以分享其他旅遊網站或部落格的內容嗎？
+                                </button>
+                            </h3>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>您可以分享其他來源的有用資訊，但必須遵守以下規則：</p>
+                                    <ul>
+                                        <li>明確註明來源和原作者</li>
+                                        <li>只分享一小部分內容，並提供原始連結</li>
+                                        <li>添加您自己的評論或見解，而不僅僅是複製貼上</li>
+                                        <li>確保內容與討論主題相關</li>
+                                    </ul>
+                                    <p>請注意，大量複製他人內容可能構成版權侵犯，我們不允許這種行為。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    我可以宣傳自己的旅遊部落格或YouTube頻道嗎？
+                                </button>
+                            </h3>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>我們理解許多會員可能有自己的旅遊部落格或社交媒體頻道。關於自我宣傳，我們的政策如下：</p>
+                                    <ul>
+                                        <li>新會員（註冊未滿30天或發文少於10篇）不得發布自我宣傳內容</li>
+                                        <li>活躍會員可以在相關討論中分享自己的內容，前提是該內容對討論有實質性貢獻</li>
+                                        <li>在您的個人資料頁面中可以包含您的部落格或頻道連結</li>
+                                        <li>純粹的宣傳帖或重複宣傳同一內容將被視為垃圾訊息並被刪除</li>
+                                    </ul>
+                                    <p>如果您想進行更正式的合作或宣傳，請聯絡管理團隊討論可能的合作機會。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    我的帳號被暫時禁言了，如何申訴？
+                                </button>
+                            </h3>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>如果您的帳號被暫時禁言，您應該已收到一封說明原因的電子郵件。如果您認為這是誤判，可以通過以下步驟申訴：</p>
+                                    <ol>
+                                        <li>發送電子郵件至 <a href="mailto:appeal@tcarval.com">appeal@tcarval.com</a></li>
+                                        <li>在郵件主旨中註明「帳號申訴 - [您的用戶名]」</li>
+                                        <li>在郵件內容中說明您認為禁言是誤判的原因</li>
+                                        <li>提供任何支持您申訴的證據或說明</li>
+                                    </ol>
+                                    <p>管理團隊將在3個工作日內審核您的申訴並回覆。請注意，頻繁或無理由的申訴可能會被忽略。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm mb-3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    我可以討論日本的政治或歷史爭議話題嗎？
+                                </button>
+                            </h3>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>我們的社區主要關注旅遊體驗和實用資訊。關於敏感的政治或歷史話題：</p>
+                                    <ul>
+                                        <li>如果與旅遊直接相關（例如參觀歷史遺址的禮儀），可以客觀討論</li>
+                                        <li>討論必須保持尊重、客觀和有教育意義</li>
+                                        <li>避免發表可能引起爭議或冒犯他人的言論</li>
+                                        <li>不得使用社區作為政治宣傳或辯論平台</li>
+                                    </ul>
+                                    <p>管理員有權關閉任何演變成不友善辯論的討論串。我們建議將重點放在旅遊體驗和文化交流上。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border-0 shadow-sm">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    我可以分享日本旅遊的折扣碼或優惠資訊嗎？
+                                </button>
+                            </h3>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>分享優惠資訊是受歡迎的，但必須遵守以下規則：</p>
+                                    <ul>
+                                        <li>優惠資訊必須是公開可用的，而非私人或限制性的</li>
+                                        <li>清楚說明優惠的來源、有效期限和使用條件</li>
+                                        <li>不得分享涉及第三方佣金或推薦連結，除非您明確披露</li>
+                                        <li>不得過度發布相同的優惠資訊</li>
+                                    </ul>
+                                    <p>我們鼓勵會員分享真實的省錢技巧和優惠，但請避免任何可能被視為垃圾訊息的行為。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community Guidelines -->
+                <section class="mb-5">
+                    <h2 class="fs-4 fw-bold mb-4">社區精神</h2>
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="text-center mb-3">
+                                        <div class="bg-rose rounded-circle p-3 d-inline-block mb-3">
+                                            <i class="bi bi-people text-white fs-4"></i>
+                                        </div>
+                                        <h3 class="fs-5 fw-bold">互相尊重</h3>
+                                    </div>
+                                    <p class="text-center">我們的社區由來自不同背景、文化和觀點的旅行者組成。尊重差異，以開放的心態對待他人的意見和經驗。</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center mb-3">
+                                        <div class="bg-rose rounded-circle p-3 d-inline-block mb-3">
+                                            <i class="bi bi-lightbulb text-white fs-4"></i>
+                                        </div>
+                                        <h3 class="fs-5 fw-bold">分享知識</h3>
+                                    </div>
+                                    <p class="text-center">慷慨分享您的旅遊經驗和知識。您的建議可能幫助其他旅行者創造難忘的旅程，同時您也能從他人的分享中獲益。</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center mb-3">
+                                        <div class="bg-rose rounded-circle p-3 d-inline-block mb-3">
+                                            <i class="bi bi-globe text-white fs-4"></i>
+                                        </div>
+                                        <h3 class="fs-5 fw-bold">負責任旅遊</h3>
+                                    </div>
+                                    <p class="text-center">鼓勵尊重當地文化、保護環境和支持當地社區的負責任旅遊行為。我們的目標是促進可持續和有意義的旅遊體驗。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
